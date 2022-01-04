@@ -44,7 +44,7 @@ class UserController extends Controller
     {
         if (!Auth::attempt($request->only('nis', 'password'))) {
             return response()
-                ->json(['message' => 'Unauthorized'], 401);
+                ->json(['message' => 'Nis and Password Unauthorized'], 401);
         }
 
         $user = User::where('nis', $request['nis'])->firstOrFail();
