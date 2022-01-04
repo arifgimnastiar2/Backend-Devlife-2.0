@@ -11,54 +11,61 @@ use Laravel\Sanctum\HasApiTokens;
 
 class UserController extends Controller
 {
-  //
-  public function register(Request $request)
-  {
-    $validator = Validator::make($request->all(), [
+    //
+    public function register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'nis' => 'required|integer|unique:users',
+            'name' => 'required|string|max:255',
+            'jurusan' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:4'
+        ]);
 
-      'name' => 'required|string|max:255',
-      'email' => 'required|string|email|max:255|unique:users',
-      'password' => 'required|string|min:4'
-    ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors());
+        }
 
-    if ($validator->fails()) {
-      return response()->json($validator->errors());
+        $user = User::create([
+            'nis' => $request->nis,
+            'name' => $request->name,
+            'jurusan' => $request->jurusan,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+
+        $token = $user->createToken('auth_token')->plainTextToken;
+
+        return response()
+            ->json(['data' => $user, 'access_token' => $token, 'token_type' => 'Bearer',]);
     }
 
-    $user = User::create([
-      'name' => $request->name,
-      'email' => $request->email,
-      'password' => Hash::make($request->password)
-    ]);
+    public function login(Request $request)
+    {
+        if (!Auth::attempt($request->only('nis', 'password'))) {
+            return response()
+                ->json(['message' => 'Unauthorized'], 401);
+        }
 
-    $token = $user->createToken('auth_token')->plainTextToken;
+        $user = User::where('nis', $request['nis'])->firstOrFail();
 
-    return response()
-      ->json(['data' => $user, 'access_token' => $token, 'token_type' => 'Bearer',]);
-  }
-
-  public function login(Request $request)
-  {
-    if (!Auth::attempt($request->only('email', 'password'))) {
-      return response()
-        ->json(['message' => 'Unauthorized'], 401);
+        $checkPassword = User::where('password', $request['password']);
+        if ($checkPassword) {
+            $token = $user->createToken('auth_token')->plainTextToken;
+            return response()
+                ->json(['message' => 'Hi ' . $user->name . ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
+        } else {
+            return response()->json(['message' => 'Password or username invalid']);
+        }
     }
 
-    $user = User::where('email', $request['email'])->firstOrFail();
+    // method for user logout and delete token
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
 
-    $token = $user->createToken('auth_token')->plainTextToken;
-
-    return response()
-      ->json(['message' => 'Hi ' . $user->name . ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
-  }
-
-  // method for user logout and delete token
-  public function logout(Request $request)
-  {
-    $request->user()->currentAccessToken()->delete();
-
-    return [
-      'message' => 'You have successfully logged out and the token was successfully deleted'
-    ];
-  }
+        return [
+            'message' => 'You have successfully logged out and the token was successfully deleted'
+        ];
+    }
 }
