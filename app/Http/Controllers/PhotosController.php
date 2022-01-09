@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Absensi;
 use Illuminate\Support\Facades\Validator;
 
 class PhotosController extends Controller
@@ -21,16 +21,6 @@ class PhotosController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -39,16 +29,20 @@ class PhotosController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'base64' => 'required|string'
+            'nis' => 'required',
+            'long' => 'required',
+            'lat' => 'required',
+            'base64' => 'required'
         ]);
 
         if ($validator->fails()) {
             return response()->json($validator->errors());
         }
 
-        $photo = Photo::create([
-            'name' => $request->name,
+        $photo = Absensi::create([
+            'nis' => $request->nis,
+            'long' => $request->long,
+            'lat' => $request->lat,
             'base64' => $request->base64
         ]);
 
@@ -56,50 +50,5 @@ class PhotosController extends Controller
 
         return response()
             ->json(['data' => $photo, 'access_token' => $token, 'token_type' => 'Bearer',]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Photo  $photo
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Photo $photo)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Photo  $photo
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Photo $photo)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Photo  $photo
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Photo $photo)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Photo  $photo
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Photo $photo)
-    {
-        //
     }
 }

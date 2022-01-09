@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Photo extends Model
+class Absensi extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,7 +17,9 @@ class Photo extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'nis',
+        'long',
+        'lat',
         'base64'
     ];
 }
