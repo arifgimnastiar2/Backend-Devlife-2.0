@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+// face-detector route
+Route::get('/face', [PhotosController::class, 'index']);
+Route::get('/photo', function() {
+    $convert = DB::select('select base64 from photos');
+    return view('photo',['convert'=>$convert]);
+});
+Route::post('/face', [PhotosController::class, 'store']);

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PhotosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
   // API route for logout user
   Route::post('/logout', [UserController::class, 'logout']);
 });
+
+// API route for Face Detector
+Route::post('/simpan', [PhotosController::class, 'store']);
