@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\MatpelController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -27,12 +28,16 @@ Route::post('/login', [UserController::class, 'login']);
 
 //Protecting Routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
-  Route::get('/profile', function (Request $request) {
-    return auth()->user();
-  });
+    Route::get('/profile', function (Request $request) {
+        return auth()->user();
+    });
 
-  // API route for logout user
-  Route::post('/logout', [UserController::class, 'logout']);
+    // API route for logout user
+    Route::post('/logout', [UserController::class, 'logout']);
+});
+
+Route::prefix('matpel')->group(function () {
+    Route::get('/', [MatpelController::class, 'getData']);
 });
 
 // API route for Face Detector
