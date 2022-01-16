@@ -16,19 +16,23 @@ use App\Http\Controllers\PhotosController;
 */
 
 Route::get('/', function () {
-  return view('welcome');
+    return view('welcome');
 })->name('home');
 
 Route::get('/dashboard', function () {
-  return view('dashboard');
+    return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard-admin', function () {
+    return view('pages.dashboard.Dashboard');
+});
 
 require __DIR__ . '/auth.php';
 
 // face-detector route
 Route::get('/face', [PhotosController::class, 'index']);
-Route::get('/photo', function() {
+Route::get('/photo', function () {
     $convert = DB::select('select base64 from photos');
-    return view('photo',['convert'=>$convert]);
+    return view('photo', ['convert' => $convert]);
 });
 Route::post('/face', [PhotosController::class, 'store']);
