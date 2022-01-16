@@ -15,9 +15,9 @@ class CreateAbsensisTable extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id('id_absensi');
-            $table->integer('nis')->unique();
-            $table->double('long', 10,7);
-            $table->double('lat', 10,7);
+            $table->integer('nis');
+            $table->double('long', 10, 7);
+            $table->double('lat', 10, 7);
             $table->text('base64');
             $table->timestamps();
         });

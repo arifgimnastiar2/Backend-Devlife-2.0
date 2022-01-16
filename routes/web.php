@@ -16,11 +16,11 @@ use App\Http\Controllers\PhotosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    redirect('/dashboard');
 })->name('home');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('pages.dashboard.Dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard-admin', function () {

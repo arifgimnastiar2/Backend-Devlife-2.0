@@ -15,10 +15,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->engine='MyISAM';
-            $table->bigInteger('id');
-            $table->integer('nis');
-            $table->primary(['id', 'nis']);
+            $table->integer('nis')->primary();
             $table->string('name');
             $table->string('jurusan');
             $table->string('email')->unique();
@@ -29,8 +26,6 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        
-        DB::statement('ALTER TABLE users MODIFY id INTEGER NOT NULL AUTO_INCREMENT');
     }
 
     /**

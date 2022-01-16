@@ -41,4 +41,4 @@ Route::prefix('matpel')->group(function () {
 });
 
 // API route for Face Detector
-Route::post('/simpan', [PhotosController::class, 'store']);
+Route::post('/attendence', [PhotosController::class, 'store']);
