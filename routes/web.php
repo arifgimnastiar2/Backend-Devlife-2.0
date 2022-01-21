@@ -32,7 +32,7 @@ require __DIR__ . '/auth.php';
 // face-detector route
 Route::get('/face', [PhotosController::class, 'index']);
 Route::get('/photo', function () {
-    $convert = DB::select('select base64 from photos');
-    return view('photo', ['convert' => $convert]);
+    
 });
 Route::post('/face', [PhotosController::class, 'store']);
+Route::get('/attendence', [PhotosController::class, 'show']);

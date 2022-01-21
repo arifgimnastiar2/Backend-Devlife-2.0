@@ -46,10 +46,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * The primary key associated with the table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'nis';
+    public function absensi(){
+        return $this->hasMany(Absensi::class, 'user_nis', 'nis');
+    }
 }

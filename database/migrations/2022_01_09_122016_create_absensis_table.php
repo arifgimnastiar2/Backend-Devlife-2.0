@@ -15,10 +15,13 @@ class CreateAbsensisTable extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id('id_absensi');
-            $table->integer('nis');
+            $table->integer('user_nis');
+            $table->foreign('user_nis')->references('nis')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->double('long', 10, 7);
             $table->double('lat', 10, 7);
             $table->text('base64');
+            $table->time('jam_masuk');
+            $table->time('jam_keluar');
             $table->timestamps();
         });
     }

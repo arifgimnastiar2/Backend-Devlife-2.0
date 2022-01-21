@@ -20,6 +20,12 @@ class Absensi extends Model
         'nis',
         'long',
         'lat',
-        'base64'
+        'base64',
+        'jam_masuk',
+        'jam_keluar'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_nis', 'nis');
+    }  
 }

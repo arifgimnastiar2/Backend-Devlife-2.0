@@ -49,13 +49,14 @@
     <div class="container">
         <div class="row d-flex">   
             <div class="col-9">
-                <form action="/" method="POST">
+                @foreach ($absens as $absensi)
+                <form action="/face" method="POST">
                     @csrf
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="name"><br>
+                    <input type="text" id="user_nis" name="user_nis" value="{{ $absensi->user->nis }}"/><br>
                     <textarea name="base64" id="base64" cols="30" rows="10"></textarea><br>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
+                @endforeach
             </div>
             <div class="col-3 text-center">
                 <p>Click the button to get your coordinates.</p>

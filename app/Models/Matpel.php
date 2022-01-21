@@ -11,6 +11,11 @@ class Matpel extends Model
 
     protected $fillable = [
         'nama_matpel',
-        'jam_matpel'
+        'jam_matpel',
+        'nip'
     ];
+
+    public function guru(){
+        return $this->belongsTo(Guru::class);
+    }  
 }

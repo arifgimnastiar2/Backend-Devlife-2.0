@@ -42,3 +42,4 @@ Route::prefix('matpel')->group(function () {
 
 // API route for Face Detector
 Route::post('/attendence', [PhotosController::class, 'store']);
+Route::get('/attendence', [PhotosController::class, 'show']);
