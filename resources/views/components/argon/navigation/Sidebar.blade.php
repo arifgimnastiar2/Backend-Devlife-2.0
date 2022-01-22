@@ -4,7 +4,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img src="assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="{{ asset('img/app-logo.png') }}" class="navbar-brand-img" alt="app-logo">
         </a>
       </div>
       <div class="navbar-inner">
@@ -21,19 +21,19 @@
             <li class="nav-item">
               <a class="nav-link" href="examples/icons.html">
                 <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
+                <span class="nav-link-text">Daftar Kelas</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="examples/map.html">
                 <i class="ni ni-pin-3 text-primary"></i>
-                <span class="nav-link-text">Google</span>
+                <span class="nav-link-text">Daftar Pengguna Baru</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="examples/profile.html">
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Profile</span>
+                <span class="nav-link-text">A</span>
               </a>
             </li>
             <li class="nav-item">
@@ -65,26 +65,26 @@
           <hr class="my-3">
           <!-- Heading -->
           <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
+            <span class="docs-normal">Tentang Sekolah</span>
           </h6>
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
                 <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
+                <span class="nav-link-text">Kabar Terbaru</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
                 <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
+                <span class="nav-link-text">Lokasi Sekolah</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
                 <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
+                <span class="nav-link-text">LMS</span>
               </a>
             </li>
             <li class="nav-item">
