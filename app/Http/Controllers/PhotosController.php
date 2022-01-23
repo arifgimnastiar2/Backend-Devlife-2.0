@@ -29,10 +29,12 @@ class PhotosController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'nis' => 'required',
+            'user_nis' => 'required',
             'long' => 'required',
             'lat' => 'required',
-            'base64' => 'required'
+            'base64' => 'required',
+            'jam_masuk' => 'required',
+            'jam_keluar' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -40,15 +42,24 @@ class PhotosController extends Controller
         }
 
         $photo = Absensi::create([
-            'nis' => $request->nis,
+            'user_nis' => $request->user_nis,
             'long' => $request->long,
             'lat' => $request->lat,
-            'base64' => $request->base64
+            'base64' => $request->base64,
+            'jam_masuk' => $request->jam_masuk,
+            'jam_keluar' => $request->jam_keluar
         ]);
 
         $token = $photo->createToken('auth_token')->plainTextToken;
 
         return response()
             ->json(['data' => $photo, 'access_token' => $token, 'token_type' => 'Bearer',]);
+        // return view('photo');
+    }
+
+    public function show(){
+        $convert = Absensi::get();
+        // dd($convert);
+        return response()->json(['data' => $convert]);
     }
 }

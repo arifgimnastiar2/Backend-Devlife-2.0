@@ -2,9 +2,10 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAbsensisTable extends Migration
+class CreatePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +14,16 @@ class CreateAbsensisTable extends Migration
      */
     public function up()
     {
-        Schema::create('absensis', function (Blueprint $table) {
-            $table->id('id_absensi')->autoIncrement();
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->id('permissions_id')->autoIncrement();
             $table->unsignedBigInteger('user_nis');
             $table->foreign('user_nis')->references('nis')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->double('latitude', 10, 7);
-            $table->double('longitude', 10, 7);
-            $table->text('base64');
-            $table->time('jam_masuk');
-            $table->time('jam_keluar');
+            $table->unsignedBigInteger('matpel_id',);
+            $table->foreign('matpel_id')->references('id_matpel')->on('matpels')->onDelete('cascade')->onUpdate('cascade');
+            $table->text('keterangan');
+            $table->time('jam_izin');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -33,6 +34,6 @@ class CreateAbsensisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('absensis');
+        Schema::dropIfExists('permissions');
     }
 }

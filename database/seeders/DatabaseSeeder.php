@@ -3,6 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\GuruTableSeeder;
+use Database\Seeders\UsersTableSeeder;
+use Database\Seeders\MatpelTableSeeder;
+use Database\Seeders\AbsensiTableSeeder;
+use Database\Seeders\PermissionsTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,7 +19,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            usersTableSeeder::class
+            UsersTableSeeder::class,
+            GuruTableSeeder::class,
+            MatpelTableSeeder::class,
+            AbsensiTableSeeder::class,
+            PermissionsTableSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

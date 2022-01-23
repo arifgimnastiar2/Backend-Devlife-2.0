@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class usersTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,15 @@ class usersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'admin_arif',
-            'email' => 'admin@yahoo.com',
-            'avatar' => 'arif.jpg',
-            'password' => bcrypt('12345q'),
-            'is_admin' => true
-        ]); 
+            'nis'           => 1920118091,
+            'name'          => 'Rafi Khoirulloh',
+            'jurusan'       => 'Rekayasa Perangkat Lunak',
+            'kelas'         => 'RPL 1',
+            'email'         => 'khoirulloh.rafi2@gmail.com',
+            'avatar'        => 'profile.png',
+            'password'      => bcrypt('123456'),
+            'is_admin'      => true,
+            'created_at'    => date('d M Y')
+        ]);
     }
 }
