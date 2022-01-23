@@ -7,6 +7,7 @@
         <tr>
             <th>No</th>
             <th>Nis</th>
+            <th>Name</th>
             <th>Longitude</th>
             <th>latitude</th>
             <th>base64</th>
@@ -19,6 +20,7 @@
         <tr>
             <td>{{ $key+1 }}</td>
             <td>{{ $attend->user_nis }}</td>
+            <td>{{ $attend->user->name }}</td>
             <td>{{ $attend->latitude }}</td>
             <td>{{ $attend->longitude }}</td>
             <td><img src="{{ $attend->base64 }}" alt="{{ $attend->base64 }}"/></td>
