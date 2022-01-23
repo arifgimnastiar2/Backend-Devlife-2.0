@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\User;
+use App\Models\Absensi;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotosController;
+use App\Models\Permission;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +43,24 @@ Route::get('/photo', function () {
 Route::post('/face', [PhotosController::class, 'store']);
 Route::get('/attendence', [PhotosController::class, 'show']);
 Route::get('/permission', [PermissionController::class, 'index']);
+
+
+// sidebar class route
+Route::get('/class', function(User $user){
+    return view('class', [
+        'title' => 'Daftar Kelas',
+        'tables' => $user->get()
+    ]);
+});
+Route::get('/attedence', function(Absensi $absen) {
+    return view('attedence', [
+        'title' => 'Kehadiran',
+        'attedence' => $absen->withTrashed()->get()
+    ]);
+});
+Route::get('/permissions', function(Permission $permission) {
+    return view('permissions', [
+        'title' => 'Izin',
+        'permissions' => $permission->get()
+    ]);
+});

@@ -18,9 +18,8 @@ class Absensi extends Model
      * @var array
      */
     protected $fillable = [
-        'nis',
-        'long',
-        'lat',
+        'longitude',
+        'latitude',
         'base64',
         'jam_masuk',
         'jam_keluar'
@@ -28,6 +27,6 @@ class Absensi extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_nis', 'nis');
+        return $this->belongsTo(User::class, 'user_nis');
     }
 }
