@@ -7,7 +7,7 @@
             <div class="card-header bg-transparent">
                 <div class="row align-items-center">
                 <div class="col">
-                    <h6 class="text-light text-uppercase ls-1 mb-1">Report</h6>
+                    <h6 class="text-light text-uppercase ls-1 mb-1">Rekapan Data Absensi (per Semester)</h6>
                     <h5 class="h3 text-white mb-0">Total Absensi</h5>
                 </div>
                 <div class="col">
@@ -44,8 +44,8 @@
             <div class="card-header bg-transparent">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                        <h5 class="h3 mb-0">Total orders</h5>
+                        <h6 class="text-uppercase text-muted ls-1 mb-1">Rekapan Data Absensi (per Minggu)</h6>
+                        <h5 class="h3 mb-0">Total Absensi</h5>
                     </div>
                 </div>
             </div>
@@ -66,11 +66,11 @@
             <div class="card-header border-0">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="mb-0">Page visits</h3>
+                        <h3 class="mb-0">Tabel Absensi</h3>
                     </div>
                     
                     <div class="col text-right">
-                        <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                        <a href="#!" class="btn btn-sm btn-primary">Lihat Semua</a>
                     </div>
                 </div>
             </div>
@@ -80,25 +80,25 @@
                 <table class="table align-items-center table-flush">
                     <thead class="thead-light">
                         <tr>
-                        <th scope="col">Page name</th>
-                        <th scope="col">Visitors</th>
-                        <th scope="col">Unique users</th>
-                        <th scope="col">Bounce rate</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Jam Masuk</th>
+                        <th scope="col">Jam Keluar</th>
                         </tr>
                     </thead>
                 
                     <tbody>
                         <tr>
                             <th scope="row">
-                                /argon/
+                                1
                             </th>
                             
                             <td>
-                                4,569
+                                Senin, 03-01-2022
                             </td>
                             
                             <td>
-                                340
+                                06:45:00
                             </td>
                             
                             <td>
@@ -107,15 +107,15 @@
                         </tr>
                         <tr>
                             <th scope="row">
-                                /argon/index.html
+                                2
                             </th>
                             
                             <td>
-                                3,985
+                                Selasa, 04-01-2022
                             </td>
                             
                             <td>
-                                319
+                                06:45:00
                             </td>
                             
                             <td>
@@ -125,15 +125,15 @@
                         
                         <tr>
                             <th scope="row">
-                                /argon/charts.html
+                                3
                             </th>
                             
                             <td>
-                                3,513
+                                Rabu, 05-01-2022
                             </td>
                             
                             <td>
-                                294
+                                06:45:00
                             </td>
                             
                             <td>
@@ -142,13 +142,13 @@
                         </tr>
                         <tr>
                         <th scope="row">
-                            /argon/tables.html
+                            4
                         </th>
                         <td>
-                            2,050
+                            Kamis, 06-01-2022
                         </td>
                         <td>
-                            147
+                            06:45:00
                         </td>
                         <td>
                             <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
@@ -156,13 +156,13 @@
                         </tr>
                         <tr>
                         <th scope="row">
-                            /argon/profile.html
+                            5
                         </th>
                         <td>
-                            1,795
+                            Jumat, 07-01-2022
                         </td>
                         <td>
-                            190
+                            06:45:00
                         </td>
                         <td>
                             <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
@@ -178,10 +178,10 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Social traffic</h3>
+                  <h3 class="mb-0">Mata Pelajaran</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                  <a href="#!" class="btn btn-sm btn-primary">Lihat Semua</a>
                 </div>
               </div>
             </div>
@@ -190,22 +190,22 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
-                    <th scope="col"></th>
+                    <th scope="col">Mata Pelajaran</th>
+                    <th scope="col">Hadir</th>
+                    <th scope="col">Absen</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">
-                      Facebook
+                      Matematika
                     </th>
                     <td>
-                      1,480
+                      8
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">60%</span>
+                        <span class="mr-2">0</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
@@ -216,14 +216,14 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      Facebook
+                      Bahasa Indonesia
                     </th>
                     <td>
-                      5,480
+                      7
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">70%</span>
+                        <span class="mr-2">1</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
@@ -234,14 +234,14 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      Google
+                      Bahasa Inggris
                     </th>
                     <td>
-                      4,807
+                      8
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">80%</span>
+                        <span class="mr-2">0</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
@@ -252,14 +252,14 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      Instagram
+                      Fisika
                     </th>
                     <td>
-                      3,678
+                      5
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">75%</span>
+                        <span class="mr-2">3</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
@@ -270,14 +270,14 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      twitter
+                      Kimia
                     </th>
                     <td>
-                      2,645
+                      5
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">30%</span>
+                        <span class="mr-2">3</span>
                         <div>
                           <div class="progress">
                             <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
