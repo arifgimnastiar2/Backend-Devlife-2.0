@@ -11,9 +11,15 @@ class Guru extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'tlp', 'alamat'];
+    protected $table = 'guru';
 
     public function matpels()
     {
         return $this->hasMany(Matpel::class);
+    }
+
+    public function walikelas()
+    {
+        return $this->hasMany(Kelas::class);
     }
 }

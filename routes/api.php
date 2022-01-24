@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\AttendanceController;
 use App\Http\Controllers\Api\MatpelController;
-use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\Api\PermissionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -42,8 +43,7 @@ Route::prefix('matpel')->group(function () {
 });
 
 // API route for Face Detector
-Route::post('/attendence', [PhotosController::class, 'store']);
-Route::get('/attendence', [PhotosController::class, 'show']);
+Route::post('/attendence', [AttendanceController::class, 'store']);
 
 // API route for Permission
 Route::get('/permission', [PermissionController::class, 'index']);

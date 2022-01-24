@@ -19,7 +19,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/class">
+              <a class="nav-link" href={{ route('kelas') }}>
                 <i class="ni ni-planet text-orange"></i>
                 <span class="nav-link-text">Daftar Kelas</span>
               </a>
@@ -31,15 +31,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/profile.html">
+              <a class="nav-link" href="{{ route('permission') }}">
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">A</span>
+                <span class="nav-link-text">Daftar Izin Siswa</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="examples/tables.html">
+              <a class="nav-link" href="{{ route('attendance') }}">
                 <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Tables</span>
+                <span class="nav-link-text">Daftar Kehadiran Siswa</span>
               </a>
             </li>
             <li class="nav-item">

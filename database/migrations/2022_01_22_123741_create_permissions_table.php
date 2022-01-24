@@ -19,7 +19,7 @@ class CreatePermissionsTable extends Migration
             $table->unsignedBigInteger('user_nis');
             $table->foreign('user_nis')->references('nis')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('matpel_id',);
-            $table->foreign('matpel_id')->references('id_matpel')->on('matpels')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('matpel_id')->references('id_matpel')->on('matpel')->onDelete('cascade')->onUpdate('cascade');
             $table->text('keterangan');
             $table->time('jam_izin');
             $table->timestamps();

@@ -24,6 +24,8 @@ class Absensi extends Model
         'jam_masuk',
         'jam_keluar'
     ];
+    protected $table = 'absensi';
+
 
     public function user()
     {

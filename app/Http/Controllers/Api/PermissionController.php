@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Api\ResponseFormatter;
+use App\Http\Controllers\Controller;
 use App\Models\Permission;
 use Illuminate\Http\Request;
 
@@ -16,20 +16,7 @@ class PermissionController extends Controller
     public function index()
     {
         $items = Permission::with('detailUser')->with('detailMatpel')->get();
-        return view('pages.permissions.index', [
-            'title' => 'Kehadiran',
-            'data' => $items
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return ResponseFormatter::success($items, 'Successfully get data permission!');
     }
 
     /**
@@ -50,17 +37,6 @@ class PermissionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Permission $permission)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Permission $permission)
     {
         //
     }

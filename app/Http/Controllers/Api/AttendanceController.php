@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
 use App\Models\Absensi;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-class PhotosController extends Controller
+class AttendanceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +16,6 @@ class PhotosController extends Controller
      */
     public function index()
     {
-        return view('index');
     }
 
     /**
@@ -51,15 +49,40 @@ class PhotosController extends Controller
         ]);
 
         $token = $photo->createToken('auth_token')->plainTextToken;
-
-        return response()
-            ->json(['data' => $photo, 'access_token' => $token, 'token_type' => 'Bearer',]);
-        // return view('photo');
+        return ResponseFormatter::success($photo, 'Successfully get data attendance!');
     }
 
-    public function show(){
-        $convert = Absensi::get();
-        // dd($convert);
-        return response()->json(['data' => $convert]);
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Absensi  $absensi
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Absensi $absensi)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Absensi  $absensi
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Absensi $absensi)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Absensi  $absensi
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Absensi $absensi)
+    {
+        //
     }
 }

@@ -12,7 +12,14 @@ class Permission extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['permissions_id', 'user_nis', 'matpel_id', 'keterangan', 'hari_izin', 'jam_izin'];
+    protected $fillable = [
+        'permissions_id',
+        'user_nis',
+        'matpel_id',
+        'keterangan',
+        'hari_izin',
+        'jam_izin'
+    ];
 
     public function detailUser()
     {

@@ -13,7 +13,7 @@ class CreateGurusTable extends Migration
      */
     public function up()
     {
-        Schema::create('gurus', function (Blueprint $table) {
+        Schema::create('guru', function (Blueprint $table) {
             $table->id('nip')->autoIncrement();
             $table->string('nama_guru');
             $table->string('kompetensi_keahlian');

@@ -13,12 +13,12 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($permissions as $key => $permission)
+            @foreach ($data as $key => $permission)
             <tr>
                 <td>{{ $key+1 }}</td>
                 <td>{{ $permission->user_nis }}</td>
-                <td>{{ $permission->detailuser->name }}</td>
-                <td>{{ $permission->detailmatpel->nama_matpel }}</td>
+                <td>{{ $permission->detailUser->name }}</td>
+                <td>{{ $permission->detailMatpel->nama_matpel }}</td>
                 <td>{{ $permission->keterangan }}</td>
                 <td>{{ $permission->jam_izin }}</td>
             </tr>

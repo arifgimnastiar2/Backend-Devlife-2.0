@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($attedence as $key => $attend)
+        @foreach ($data as $key => $attend)
         <tr>
             <td>{{ $key+1 }}</td>
             <td>{{ $attend->user_nis }}</td>

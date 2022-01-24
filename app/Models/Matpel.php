@@ -15,6 +15,7 @@ class Matpel extends Model
         'jam_matpel',
         'nip'
     ];
+    protected $table = 'matpel';
 
     public function guru()
     {
