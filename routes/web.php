@@ -21,7 +21,7 @@ use App\Models\Permission;
 */
 
 Route::get('/', function () {
-    redirect('/dashboard');
+    return redirect('/dashboard');
 })->name('home');
 
 Route::resource('dashboard', DashboardController::class);
@@ -46,19 +46,19 @@ Route::get('/permission', [PermissionController::class, 'index']);
 
 
 // sidebar class route
-Route::get('/class', function(User $user){
+Route::get('/class', function (User $user) {
     return view('class', [
         'title' => 'Daftar Kelas',
         'tables' => $user->get()
     ]);
 });
-Route::get('/attedence', function(Absensi $absen) {
+Route::get('/attedence', function (Absensi $absen) {
     return view('attedence', [
         'title' => 'Kehadiran',
         'attedence' => $absen->withTrashed()->get()
     ]);
 });
-Route::get('/permissions', function(Permission $permission) {
+Route::get('/permissions', function (Permission $permission) {
     return view('permissions', [
         'title' => 'Izin',
         'permissions' => $permission->get()

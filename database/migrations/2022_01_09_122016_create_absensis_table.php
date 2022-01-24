@@ -23,6 +23,7 @@ class CreateAbsensisTable extends Migration
             $table->time('jam_masuk');
             $table->time('jam_keluar');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
