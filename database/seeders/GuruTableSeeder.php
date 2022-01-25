@@ -17,9 +17,8 @@ class GuruTableSeeder extends Seeder
         Guru::create([
             'nip'                   => 1920118091,
             'nama_guru'             => 'Rafi Khoirulloh',
+            'kode_guru'             => 'RKH',
             'kompetensi_keahlian'   => 'Information Technology',
-            'telepon'               => .082120806320,
-            'alamat'                => 'Jl. Babakan Jati',
             'created_at'            => date('d M Y')
         ]);
     }

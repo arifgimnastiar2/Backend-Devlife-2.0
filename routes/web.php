@@ -24,7 +24,7 @@ Route::get('/', function () {
 require __DIR__ . '/auth.php';
 
 //---------------------- Dashboard Route
-Route::resource('dashboard', DashboardController::class);
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 //---------------------- Kelas Route

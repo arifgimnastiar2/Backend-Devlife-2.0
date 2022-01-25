@@ -16,10 +16,10 @@ class CreateGurusTable extends Migration
         Schema::create('guru', function (Blueprint $table) {
             $table->id('nip')->autoIncrement();
             $table->string('nama_guru');
+            $table->char('kode_guru', 3);
             $table->string('kompetensi_keahlian');
-            $table->string('telepon');
-            $table->string('alamat');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

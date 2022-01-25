@@ -13,9 +13,9 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="examples/dashboard.html">
+              <a class="nav-link active" href="{{ route('dashboard') }}">
                 <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard</span>
+                <span class="nav-link-text">Halaman Utama</span>
               </a>
             </li>
             <li class="nav-item">
