@@ -18,6 +18,7 @@ class Absensi extends Model
      * @var array
      */
     protected $fillable = [
+        'user_nis',
         'longitude',
         'latitude',
         'base64',

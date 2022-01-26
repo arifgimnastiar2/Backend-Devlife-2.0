@@ -28,11 +28,10 @@ class AttendanceController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'user_nis' => 'required',
-            'long' => 'required',
-            'lat' => 'required',
+            'longitude' => 'required',
+            'latitude' => 'required',
             'base64' => 'required',
-            'jam_masuk' => 'required',
-            'jam_keluar' => 'required'
+            'jam_masuk' => 'required|string|max:10',
         ]);
 
         if ($validator->fails()) {
@@ -41,8 +40,8 @@ class AttendanceController extends Controller
 
         $photo = Absensi::create([
             'user_nis' => $request->user_nis,
-            'long' => $request->long,
-            'lat' => $request->lat,
+            'longitude' => $request->longitude,
+            'latitude' => $request->latitude,
             'base64' => $request->base64,
             'jam_masuk' => $request->jam_masuk,
             'jam_keluar' => $request->jam_keluar
