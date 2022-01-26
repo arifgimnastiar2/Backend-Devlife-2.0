@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AttendanceController;
+use App\Http\Controllers\Api\GuruController;
 use App\Http\Controllers\Api\MatpelController;
 use App\Http\Controllers\Api\PermissionController;
 use Illuminate\Http\Request;
@@ -47,3 +48,6 @@ Route::post('/attendence', [AttendanceController::class, 'store']);
 
 // API route for Permission
 Route::get('/permission', [PermissionController::class, 'index']);
+
+// Api route for guru
+Route::get('/guru', [GuruController::class, 'index']);

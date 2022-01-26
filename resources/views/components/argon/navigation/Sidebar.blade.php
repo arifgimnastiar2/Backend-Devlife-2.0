@@ -20,7 +20,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href={{ route('kelas') }}>
-                <i class="ni ni-planet text-orange"></i>
+                <i class="ni ni-atom text-orange"></i>
                 <span class="nav-link-text">Daftar Kelas</span>
               </a>
             </li>

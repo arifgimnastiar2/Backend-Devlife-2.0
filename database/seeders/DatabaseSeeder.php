@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\GuruTableSeeder;
+use Database\Seeders\KelasTableSeeder;
 use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\MatpelTableSeeder;
 use Database\Seeders\AbsensiTableSeeder;
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UsersTableSeeder::class,
             GuruTableSeeder::class,
+            KelasTableSeeder::class,
             MatpelTableSeeder::class,
             AbsensiTableSeeder::class,
             PermissionsTableSeeder::class,

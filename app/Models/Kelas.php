@@ -13,14 +13,13 @@ class Kelas extends Model
     protected $fillable = [
         'nip_guru',
         'nama',
-        'keterangan',
-        'tahun_angkatan'
+        'kelas',
     ];
 
     protected $table = 'kelas';
 
     public function walikelas()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->belongsTo(Guru::class, 'nip_guru', 'nip');
     }
 }
