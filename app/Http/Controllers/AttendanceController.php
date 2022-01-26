@@ -12,7 +12,6 @@ class AttendanceController extends Controller
     {
         $items = Absensi::with('user')->get();
         return view('pages.attendance.index', [
-            'title' => 'Data Kehadiran Siswa',
             'data' => $items
         ]);
     }

@@ -1,5 +1,5 @@
 @extends('layouts.template.main')
-{{-- @dd($permissions) --}}
+{{-- @dd($data) --}}
 @section('content')
     <table class="table table-hover">
         <thead>

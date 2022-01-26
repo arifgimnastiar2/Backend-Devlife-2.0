@@ -30,7 +30,7 @@ Route::resource('dashboard', DashboardController::class);
 //---------------------- Kelas Route
 Route::prefix('kelas')->group(function () {
     Route::get('/', [KelasController::class, 'index'])->name('kelas');
-    Route::get('/detail', [KelasController::class, 'show']);
+    Route::get('/detail/{kelas:nama}', [KelasController::class, 'show']);
     Route::get('/detail/siswa/{nama}', [KelasController::class, 'detailSiswa']);
 });
 

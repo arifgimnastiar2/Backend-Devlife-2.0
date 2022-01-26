@@ -15,8 +15,32 @@ class MatpelTableSeeder extends Seeder
     public function run()
     {
         Matpel::create([
-            'nip_guru'      => 1920118091,
-            'nama_matpel'   => 'Sistem Informasi',
+            'nip_guru'      => 1920118060,
+            'nama_matpel'   => 'Information Technology',
+            'jam_matpel'    => date('H:i'),
+            'created_at'    => date('d M Y')
+        ]);
+        Matpel::create([
+            'nip_guru'      => 1920118061,
+            'nama_matpel'   => 'Information Technology',
+            'jam_matpel'    => date('H:i'),
+            'created_at'    => date('d M Y')
+        ]);
+        Matpel::create([
+            'nip_guru'      => 1920118062,
+            'nama_matpel'   => 'Information Technology',
+            'jam_matpel'    => date('H:i'),
+            'created_at'    => date('d M Y')
+        ]);
+        Matpel::create([
+            'nip_guru'      => 1920118063,
+            'nama_matpel'   => 'Information Technology',
+            'jam_matpel'    => date('H:i'),
+            'created_at'    => date('d M Y')
+        ]);
+        Matpel::create([
+            'nip_guru'      => 1920118064,
+            'nama_matpel'   => 'Information Technology',
             'jam_matpel'    => date('H:i'),
             'created_at'    => date('d M Y')
         ]);

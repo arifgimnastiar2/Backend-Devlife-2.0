@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelas;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class KelasController extends Controller
@@ -17,7 +18,6 @@ class KelasController extends Controller
         $items = Kelas::with('walikelas')->get();
 
         return view('pages.kelas.index', [
-            'title' => 'Daftar Kelas',
             'data' => $items
         ]);
     }
@@ -51,7 +51,10 @@ class KelasController extends Controller
      */
     public function show(Kelas $kelas)
     {
-        //
+        $items = $kelas->get();
+        return view('pages.kelas.siswa.index', [
+            'data' => $items
+        ]);
     }
 
     /**

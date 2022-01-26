@@ -17,7 +17,6 @@ class PermissionController extends Controller
     {
         $items = Permission::with('detailUser')->with('detailMatpel')->get();
         return view('pages.permissions.index', [
-            'title' => 'Kehadiran',
             'data' => $items
         ]);
     }

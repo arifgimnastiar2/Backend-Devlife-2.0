@@ -11,9 +11,9 @@ class Kelas extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'user_id',
         'nip_guru',
         'nama',
-        'keterangan',
         'tahun_angkatan'
     ];
 
@@ -21,6 +21,11 @@ class Kelas extends Model
 
     public function walikelas()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->belongsTo(Guru::class, 'nip_guru', 'nip');
+    }
+
+    public function detailuser()
+    {
+        return $this->hasMany(User::class, 'user_id', 'nis');
     }
 }

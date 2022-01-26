@@ -1,5 +1,5 @@
 @extends('layouts.template.main')
-
+@dd($data)
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -19,17 +19,21 @@
                                     <th scope="col" class="sort" data-sort="nis">Nis</th>
                                     <th scope="col" class="sort" data-sort="name">Nama</th>
                                     <th scope="col" class="sort" data-sort="kelas">Kelas</th>
+                                    <th scope="col" class="sort" data-sort="telepon">Telepon</th>
+                                    <th scope="col" class="sort" data-sort="alamat">Alamat</th>
                                 </tr>
                             </thead>
 
                             <tbody class="list">
-                                @foreach ($tables as $key => $table)
+                                @foreach ($data as $key => $table)
                                     <tr>
                                         
                                             <td class="budget">{{ $key+1 }}</td>
                                             <td class="budget">{{ $table->nis }}</td>
                                             <td class="budget">{{ $table->name }}</td>
                                             <td class="budget">{{ $table->kelas }}</td>
+                                            <td class="budget">{{ $table->telepon }}</td>
+                                            <td class="budget">{{ $table->alamat     }}</td>
                             
                                     </tr>
                                 @endforeach            

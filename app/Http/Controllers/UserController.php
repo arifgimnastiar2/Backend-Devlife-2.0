@@ -26,6 +26,8 @@ class UserController extends Controller
             return response()->json($validator->errors());
         }
 
+        $user = Auth::user();
+
         $user = User::create([
             'nis' => $request->nis,
             'name' => $request->name,

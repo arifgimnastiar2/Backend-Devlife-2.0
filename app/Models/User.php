@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Permission::class, 'nis');
     }
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'user_id', 'nis');
+    }
 }

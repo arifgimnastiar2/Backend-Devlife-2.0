@@ -1,189 +1,69 @@
 @extends('layouts.template.main')
-
+{{-- @dd($data) --}}
 @section('content')
     <div class="row">
         <div class="col">
             <div class="card bg-default shadow">
             <!-- Card header -->
             <div class="card-header bg-transparent border-0">
-                <h3 class="mb-0 text-white">Tabel Siswa</h3>
+                <h3 class="mb-0 text-white">Kelas</h3>
             </div>
             <!-- Light table -->
             <div class="table-responsive">
                 <table class="table align-items-center table-dark table-flush">
                 <thead class="thead-dark">
                     <tr>
-                    <th scope="col">No Absen</th>
-                    <th scope="col">NIS</th>
+                    <th scope="col">No</th>
+                    <th scope="col">NIP</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">No HP</th>
-                    <th scope="col">Alamat</th>
+                    <th scope="col">Guru</th>
+                    <th scope="col">Tahun Angkatan</th>
                     <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody class="list">
-                    <tr>
-                    <th scope="row">
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">1</span>
-                        </div>
-                        </div>
-                    </th>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">1920118001</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Ananta</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">0896229173016</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Bandung</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-sm btn-success">Detail Kelas</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <tr>
-                    <th scope="row">
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">2</span>
-                        </div>
-                        </div>
-                    </th>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">1920118002</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Camelia</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">0816572173901</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Bandung</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-sm btn-neutral">Detail Kelas</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <th scope="row">
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">3</span>
-                        </div>
-                        </div>
-                    </th>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">1920118003</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Davin</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">0831329173096</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Bandung</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-sm btn-neutral">Detail Kelas</a>
-                    </td>
-                    </tr>
-                    <tr>
-                    <tr>
-                    <th scope="row">
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">4</span>
-                        </div>
-                        </div>
-                    </th>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">1920118004</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Hizna</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">0897629172136</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="media align-items-center">
-                        <div class="media-body">
-                            <span class="name mb-0 text-sm">Bandung</span>
-                        </div>
-                        </div>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-sm btn-neutral">Detail Kelas</a>
-                    </td>
-                    </tr>
+                    @foreach ($data as $key => $item)
+                        <tr>
+                            <td>
+                                <div class="media align-items-center">
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{ $key+1 }}</span>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="media align-items-center">
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{ $item->nip_guru }}</span>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="media align-items-center">
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{ $item->nama }}</span>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="media align-items-center">
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{ $item->walikelas->nama_guru }}</span>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="media align-items-center">
+                                <div class="media-body">
+                                    <span class="name mb-0 text-sm">{{ $item->tahun_angkatan }}</span>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="/kelas/detail/{{ $item->nama }}" class="btn btn-sm btn-neutral">Detail Kelas</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
                 </table>
             </div>

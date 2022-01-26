@@ -15,7 +15,7 @@ class CreateAbsensisTable extends Migration
     {
         Schema::create('absensi', function (Blueprint $table) {
             $table->id('id_absensi')->autoIncrement();
-            $table->unsignedBigInteger('user_nis');
+            $table->bigInteger('user_nis')->unsigned();
             $table->foreign('user_nis')->references('nis')->on('users');
             $table->double('latitude', 10, 7);
             $table->double('longitude', 10, 7);

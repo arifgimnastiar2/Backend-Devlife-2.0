@@ -15,11 +15,11 @@ class Guru extends Model
 
     public function matpels()
     {
-        return $this->hasMany(Matpel::class);
+        return $this->belongsTo(Matpel::class, 'nip_guru', 'nip');
     }
 
     public function walikelas()
     {
-        return $this->hasMany(Kelas::class);
+        return $this->hasMany(Kelas::class, 'nip_guru', 'nip');
     }
 }

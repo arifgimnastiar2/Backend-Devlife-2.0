@@ -13,13 +13,13 @@ class Matpel extends Model
     protected $fillable = [
         'nama_matpel',
         'jam_matpel',
-        'nip'
+        'nip_guru'
     ];
     protected $table = 'matpel';
 
     public function guru()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->hasOne(Guru::class, 'nip_guru');
     }
 
     public function permission()

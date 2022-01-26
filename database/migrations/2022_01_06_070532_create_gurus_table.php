@@ -20,6 +20,7 @@ class CreateGurusTable extends Migration
             $table->string('telepon');
             $table->string('alamat');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

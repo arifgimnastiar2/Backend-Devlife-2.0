@@ -1,4 +1,4 @@
-{{-- @dd($attedence) --}}
+{{-- @dd($data)s --}}
 @extends('layouts.template.main')
 
 @section('content')
