@@ -20,7 +20,7 @@
                 <td>{{ $permission->user_nis }}</td>
                 <td>{{ $permission->detailUser->name }}</td>
                 <td>{{ $permission->detailMatpel->nama_matpel }}</td>
-                <td><img src="{{ url($permission->lampiran) }}" alt="lampiran"></td>
+                <td><img src="{{ url($permission->lampiran) }}" alt="lampiran" style="max-width: 200px; max-height: 200px; border-radius: 12px;"></td>
                 <td>{{ $permission->keterangan }}</td>
                 <td>{{ $permission->jam_izin }}</td>
             </tr>
