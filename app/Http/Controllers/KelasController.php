@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kelas;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KelasController extends Controller
 {
@@ -13,10 +14,9 @@ class KelasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Kelas $kelas)
     {
         $items = Kelas::with('walikelas')->get();
-
         return view('pages.kelas.index', [
             'data' => $items
         ]);
@@ -51,9 +51,8 @@ class KelasController extends Controller
      */
     public function show(Kelas $kelas)
     {
-        $items = $kelas->get();
         return view('pages.kelas.siswa.index', [
-            'data' => $items
+            'data' => $kelas->detailusers
         ]);
     }
 

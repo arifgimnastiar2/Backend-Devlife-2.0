@@ -70,4 +70,12 @@ class UserController extends Controller
             'message' => 'You have successfully logged out and the token was successfully deleted'
         ];
     }
+
+    public function show(User $user)
+    {
+        $items = $user->get();
+        return view('pages.kelas.siswa.index', [
+            'data' => $items
+        ]);
+    }
 }

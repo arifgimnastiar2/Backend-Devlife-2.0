@@ -19,6 +19,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'id_kelas',
         'nis',
         'name',
         'jurusan',
@@ -57,8 +58,8 @@ class User extends Authenticatable
         return $this->hasMany(Permission::class, 'nis');
     }
 
-    public function kelas()
+    public function detailkelas()
     {
-        return $this->belongsTo(Kelas::class, 'user_id', 'nis');
+        return $this->belongsTo(Kelas::class, 'id_kelas', 'kelas_id');
     }
 }

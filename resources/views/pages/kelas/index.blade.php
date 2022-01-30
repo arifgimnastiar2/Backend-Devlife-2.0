@@ -1,5 +1,5 @@
 @extends('layouts.template.main')
-{{-- @dd($data) --}}
+{{-- @dd($slug) --}}
 @section('content')
     <div class="row">
         <div class="col">
@@ -60,7 +60,7 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="/kelas/detail/{{ $item->nama }}" class="btn btn-sm btn-neutral">Detail Kelas</a>
+                                <a href="/kelas/detail/{{ $item->slug }}" class="btn btn-sm btn-neutral">Lihat</a>
                             </td>
                         </tr>
                     @endforeach

@@ -1,5 +1,5 @@
 @extends('layouts.template.main')
-@dd($data)
+{{-- @dd($data) --}}
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -21,6 +21,7 @@
                                     <th scope="col" class="sort" data-sort="kelas">Kelas</th>
                                     <th scope="col" class="sort" data-sort="telepon">Telepon</th>
                                     <th scope="col" class="sort" data-sort="alamat">Alamat</th>
+                                    <th scope="col" class="sort" data-sort="action">Action</th>
                                 </tr>
                             </thead>
 
@@ -33,17 +34,13 @@
                                             <td class="budget">{{ $table->name }}</td>
                                             <td class="budget">{{ $table->kelas }}</td>
                                             <td class="budget">{{ $table->telepon }}</td>
-                                            <td class="budget">{{ $table->alamat     }}</td>
+                                            <td class="budget">{{ $table->alamat  }}</td>
+                                            <td class="budget"><a href="/kelas/detail" class="btn btn-sm btn-neutral">Absensi</a></td>
                             
                                     </tr>
                                 @endforeach            
                             </tbody>
                         </table>
-
-                            <div class="d-flex justify-content-end my-3 mx-3">
-                            <a href="/dashboard-admin" class="btn btn-success text-decoration-none mt-3">Kembali</a>
-
-                            </div>
                     </div>
                 </div>
             </div>

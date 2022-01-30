@@ -14,12 +14,11 @@ class CreateKelasTable extends Migration
     public function up()
     {
         Schema::create('kelas', function (Blueprint $table) {
-            $table->id('id_kelas')->autoIncrement();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('nis')->on('users');
+            $table->id('kelas_id');
             $table->unsignedBigInteger('nip_guru');
-            $table->foreign('nip_guru')->references('nip')->on('guru');
+            $table->foreign('nip_guru')->references('nip')->on('guru')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama');
+            $table->string('slug')->unique();
             $table->string('tahun_angkatan');
             $table->timestamps();
             $table->softDeletes();

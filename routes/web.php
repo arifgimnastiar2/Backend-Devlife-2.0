@@ -4,6 +4,7 @@ use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +31,7 @@ Route::resource('dashboard', DashboardController::class);
 //---------------------- Kelas Route
 Route::prefix('kelas')->group(function () {
     Route::get('/', [KelasController::class, 'index'])->name('kelas');
-    Route::get('/detail/{kelas:nama}', [KelasController::class, 'show']);
+    Route::get('/detail/{kelas:slug}', [KelasController::class, 'show']);
     Route::get('/detail/siswa/{nama}', [KelasController::class, 'detailSiswa']);
 });
 

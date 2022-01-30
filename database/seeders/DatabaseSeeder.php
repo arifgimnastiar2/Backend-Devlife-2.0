@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            // UsersTableSeeder::class,
             GuruTableSeeder::class,
+            KelasTableSeeder::class,
+            UsersTableSeeder::class,
             MatpelTableSeeder::class,
             AbsensiTableSeeder::class,
             PermissionsTableSeeder::class,
-            KelasTableSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
