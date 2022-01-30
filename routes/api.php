@@ -48,6 +48,7 @@ Route::post('/attendence', [AttendanceController::class, 'store']);
 
 // API route for Permission
 Route::get('/permission', [PermissionController::class, 'index']);
+Route::post('/permission', [PermissionController::class, 'store']);
 
 // Api route for guru
 Route::get('/guru', [GuruController::class, 'index']);

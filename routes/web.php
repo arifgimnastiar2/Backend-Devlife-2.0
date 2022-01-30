@@ -37,10 +37,8 @@ Route::prefix('kelas')->group(function () {
 
 
 //---------------------- Permission Route
-Route::prefix('permission')->group(function () {
-    Route::get('/', [PermissionController::class, 'index'])->name('permission');
-    Route::get('/detail', [PermissionController::class, 'show']);
-});
+Route::get('/permission', [PermissionController::class, 'index'])->name('permission');
+Route::get('/detail', [PermissionController::class, 'show']);
 
 
 //---------------------- Attendance Route

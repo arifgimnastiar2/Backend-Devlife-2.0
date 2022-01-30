@@ -8,6 +8,7 @@
                 <th>Nis</th>
                 <th>Nama</th>
                 <th>Mata Pelajaran</th>
+                <th>Bukti Lampiran</th>
                 <th>keterangan</th>
                 <th>Jam Izin</th>
             </tr>
@@ -19,6 +20,7 @@
                 <td>{{ $permission->user_nis }}</td>
                 <td>{{ $permission->detailUser->name }}</td>
                 <td>{{ $permission->detailMatpel->nama_matpel }}</td>
+                <td><img src="{{ url($permission->lampiran) }}" alt="lampiran"></td>
                 <td>{{ $permission->keterangan }}</td>
                 <td>{{ $permission->jam_izin }}</td>
             </tr>
