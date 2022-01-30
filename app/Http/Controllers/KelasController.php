@@ -16,6 +16,7 @@ class KelasController extends Controller
     {
         $items = Kelas::with('walikelas')->get();
 
+        // dd($items);
         return view('pages.kelas.index', [
             'title' => 'Daftar Kelas',
             'data' => $items
