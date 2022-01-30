@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             GuruTableSeeder::class,
+            JurusanTableSeeder::class,
             KelasTableSeeder::class,
             UsersTableSeeder::class,
             MatpelTableSeeder::class,

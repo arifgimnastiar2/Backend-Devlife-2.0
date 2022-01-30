@@ -15,7 +15,7 @@
                     <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Tahun Angkatan</th>
+                    {{-- <th scope="col">Tahun Angkatan</th> --}}
                     <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -39,7 +39,7 @@
                             <td>
                                 <div class="media align-items-center">
                                 <div class="media-body">
-                                    <span class="name mb-0 text-sm">{{ $item->nama }}</span>
+                                    <span class="name mb-0 text-sm">{{ $item->jurusan }}</span>
                                 </div>
                                 </div>
                             </td>
@@ -50,15 +50,16 @@
                                 </div>
                                 </div>
                             </td> --}}
-                            <td>
+                            {{-- <td>
                                 <div class="media align-items-center">
                                 <div class="media-body">
                                     <span class="name mb-0 text-sm">{{ $item->tahun_angkatan }}</span>
                                 </div>
                                 </div>
                             </td>
-                            <td>
-                                <a href="/kelas/detail/{{ $item->slug }}" class="btn btn-sm btn-neutral">Lihat</a>
+                            --}}
+                            <td> 
+                                <a href="/kelas/detail/{{ $item->slug  }}" class="btn btn-sm btn-neutral">Lihat</a>
                             </td>
                         </tr>
                     @endforeach

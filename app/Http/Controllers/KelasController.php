@@ -3,21 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelas;
-use App\Models\User;
+use App\Models\Jurusan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class KelasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Kelas $kelas)
     {
-        $items = Kelas::with('walikelas')->get();
-        return view('pages.kelas.index', [
+        $items = $kelas->detailusers;
+        return view('pages.kelas.siswa.index', [
             'data' => $items
         ]);
     }
@@ -51,9 +46,7 @@ class KelasController extends Controller
      */
     public function show(Kelas $kelas)
     {
-        return view('pages.kelas.siswa.index', [
-            'data' => $kelas->detailusers
-        ]);
+        
     }
 
     /**

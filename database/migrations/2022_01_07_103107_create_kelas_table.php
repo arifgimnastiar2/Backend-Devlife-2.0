@@ -17,6 +17,9 @@ class CreateKelasTable extends Migration
             $table->id('kelas_id');
             $table->unsignedBigInteger('nip_guru');
             $table->foreign('nip_guru')->references('nip')->on('guru')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('jurusan_id');
+            $table->foreign('jurusan_id')->references('id_jurusan')->on('jurusans')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama');
             $table->string('slug')->unique();
             $table->string('tahun_angkatan');

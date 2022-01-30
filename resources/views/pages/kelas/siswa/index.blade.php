@@ -1,5 +1,5 @@
 @extends('layouts.template.main')
-{{-- @dd($data) --}}
+@dd($data)
 @section('content')
     <div class="container-fluid">
         <div class="row">

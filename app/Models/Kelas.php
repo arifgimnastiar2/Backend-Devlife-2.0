@@ -27,4 +27,9 @@ class Kelas extends Model
     public function detailusers() {
         return $this->hasMany(User::class, 'id_kelas', 'kelas_id');
     }
+
+    public function detailjurusan()
+    {
+        return $this->belongsTo(Jurusan::class, 'jurusan_id', 'id_jurusan');
+    }
 }
