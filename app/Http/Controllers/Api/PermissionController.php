@@ -3,63 +3,55 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PermissionRequest;
 use App\Models\Permission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PermissionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $items = Permission::with('detailUser')->with('detailMatpel')->get();
         return ResponseFormatter::success($items, 'Successfully get data permission!');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'user_nis'      => 'required|integer',
+            'matpel_id'     => 'required|integer',
+            'lampiran'      => 'required|image',
+            'keterangan'    => 'required|string',
+            'jam_izin'      => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return ResponseFormatter::error($validator->errors());
+        }
+
+        $data = $request->all();
+        $data['lampiran'] = $request->file('lampiran')->store(
+            'assets/lampiran',
+            'public'
+        );
+
+        Permission::create($data);
+        return ResponseFormatter::success($data, 'auth_token', 'Successfully create data permission!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Permission $permission)
+    public function show(PermissionRequest $permission)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Permission $permission)
+    public function update(Permission $permission)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Permission  $permission
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Permission $permission)
+    public function destroy($id)
     {
         //
     }

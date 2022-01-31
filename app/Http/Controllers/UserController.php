@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\ResponseFormatter;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -52,13 +53,14 @@ class UserController extends Controller
         $user = User::where('nis', $request['nis'])->firstOrFail();
 
         $checkPassword = User::where('password', $request['password']);
-        if ($checkPassword) {
-            $token = $user->createToken('auth_token')->plainTextToken;
-            return response()
-                ->json(['message' => 'Hi ' . $user->name . ', welcome to home', 'access_token' => $token, 'token_type' => 'Bearer',]);
-        } else {
-            return response()->json(['message' => 'Password or username invalid']);
-        }
+        $token = $user->createToken('auth_token')->plainTextToken;
+        // return response()->json(['message' => 'Password or username invalid']);
+
+        return ResponseFormatter::success($user, $token,  'Successfully login into your account!');
+        // if ($checkPassword) {
+        //     ResponseFormatter::success($token, 'Successfully login into your account!');
+        // } else {
+        // }
     }
 
     // method for user logout and delete token

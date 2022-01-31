@@ -33,7 +33,7 @@
     --gray-dark: #32325d;
     --light: #ced4da;
     --lighter: #e9ecef;
-    --primary: #5e72e4;
+    --primary: #4e4081;
     --secondary: #f7fafc;
     --success: #2dce89;
     --info: #11cdef;
@@ -22215,13 +22215,12 @@ textarea[resize='horizontal']
 .sidenav .navbar-brand,
 .sidenav .navbar-heading
 {
-    padding: 1.5rem;
+    padding: 0.25rem;
 }
 
 .sidenav-header
 {
     height: 78px;
-
     text-align: center;
 }
 

@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\AttendanceController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\JurusanController;
-use App\Http\Controllers\KelasController;
-use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\UserController;
-use Database\Seeders\KelasTableSeeder;
 use Illuminate\Support\Facades\Route;
+use Database\Seeders\KelasTableSeeder;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\Api\GuruController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ Route::get('/', function () {
 require __DIR__ . '/auth.php';
 
 //---------------------- Dashboard Route
-Route::resource('dashboard', DashboardController::class);
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 //---------------------- Kelas Route
@@ -39,10 +40,8 @@ Route::prefix('kelas')->group(function () {
 
 
 //---------------------- Permission Route
-Route::prefix('permission')->group(function () {
-    Route::get('/', [PermissionController::class, 'index'])->name('permission');
-    Route::get('/detail', [PermissionController::class, 'show']);
-});
+Route::get('/permission', [PermissionController::class, 'index'])->name('permission');
+Route::get('/detail', [PermissionController::class, 'show']);
 
 
 //---------------------- Attendance Route

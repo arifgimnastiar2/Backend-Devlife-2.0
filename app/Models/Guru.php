@@ -13,13 +13,13 @@ class Guru extends Model
     protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'tlp', 'alamat'];
     protected $table = 'guru';
 
-    public function matpels()
+    public function guru()
     {
-        return $this->belongsTo(Matpel::class, 'nip_guru', 'nip');
+        return $this->hasMany(Matpel::class, 'nis');
     }
 
     public function walikelas()
     {
-        return $this->hasMany(Kelas::class, 'nip_guru', 'nip');
+        return $this->hasMany(Kelas::class, 'nis');
     }
 }

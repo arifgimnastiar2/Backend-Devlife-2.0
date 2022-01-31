@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Kelas;
+use Illuminate\Database\Seeder;
 
 class KelasTableSeeder extends Seeder
 {
@@ -14,52 +14,25 @@ class KelasTableSeeder extends Seeder
      */
     public function run()
     {
-        // Rekayasa Perangkat Lunak
         Kelas::create([
-            'jurusan_id' => 1,
-            'nip_guru' => '1920118061',
-            'nama' => 'Rekayasa Perangkat Lunak 1',
-            'slug' => 'rekayasa-perangkat-lunak-1',
-            'tahun_angkatan' => '2022'
-        ]);
-        Kelas::create([
-            'jurusan_id' => 1,
-            'nip_guru' => '1920118063',
-            'nama' => 'Rekayasa Perangkat Lunak 2',
-            'slug' => 'rekayasa-perangkat-lunak-2',
-            'tahun_angkatan' => '2022'
-        ]);
-        Kelas::create([
-            'jurusan_id' => 1,
-            'nip_guru' => '1920118064',
-            'nama' => 'Rekayasa Perangkat Lunak 3',
-            'slug' => 'rekayasa-perangkat-lunak-3',
-            'tahun_angkatan' => '2022'
+            'nip_guru'      => 1920118091,
+            'nama'          => 'Rekayasa Perangkat Lunak 1',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
         ]);
 
-        // Teknik Komputer Jaringan
         Kelas::create([
-            'jurusan_id' => 2,
-            'nip_guru' => '1920118060',
-            'nama' => 'Teknik Komputer Jaringan 1',
-            'slug' => 'teknik-komputer-jaringan 1',
-            'tahun_angkatan' => '2022'
-        ]);
-        Kelas::create([
-            'jurusan_id' => 2,
-            'nip_guru' => '1920118062',
-            'nama' => 'Teknik Komputer Jaringan 2',
-            'slug' => 'teknik-komputer-jaringan-2',
-            'tahun_angkatan' => '2022'
+            'nip_guru'      => 1920118092,
+            'nama'          => 'Rekayasa Perangkat Lunak 2',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
         ]);
 
-        // Multimedia
         Kelas::create([
-            'jurusan_id' => 3,
-            'nip_guru' => '1920118063',
-            'nama' => 'Multimedia',
-            'slug' => 'multimedia',
-            'tahun_angkatan' => '2022'
+            'nip_guru'      => 1920118093,
+            'nama'          => 'Rekayasa Perangkat Lunak 3',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
         ]);
     }
 }

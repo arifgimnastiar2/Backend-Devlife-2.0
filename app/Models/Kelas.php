@@ -14,7 +14,7 @@ class Kelas extends Model
         'user_id',
         'nip_guru',
         'nama',
-        'tahun_angkatan'
+        'kelas',
     ];
 
     protected $table = 'kelas';
@@ -22,14 +22,5 @@ class Kelas extends Model
     public function walikelas()
     {
         return $this->belongsTo(Guru::class, 'nip_guru', 'nip');
-    }
-
-    public function detailusers() {
-        return $this->hasMany(User::class, 'id_kelas', 'kelas_id');
-    }
-
-    public function detailjurusan()
-    {
-        return $this->belongsTo(Jurusan::class, 'jurusan_id', 'id_jurusan');
     }
 }

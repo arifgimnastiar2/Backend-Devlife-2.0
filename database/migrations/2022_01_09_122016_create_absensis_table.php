@@ -21,7 +21,7 @@ class CreateAbsensisTable extends Migration
             $table->double('longitude', 10, 7);
             $table->text('base64');
             $table->time('jam_masuk');
-            $table->time('jam_keluar');
+            $table->time('jam_keluar')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

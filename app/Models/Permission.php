@@ -16,6 +16,7 @@ class Permission extends Model
         'permissions_id',
         'user_nis',
         'matpel_id',
+        'lampiran',
         'keterangan',
         'hari_izin',
         'jam_izin'
@@ -29,5 +30,10 @@ class Permission extends Model
     public function detailMatpel()
     {
         return $this->belongsTo(Matpel::class, 'matpel_id', 'id_matpel');
+    }
+
+    public function getLampiranAttribute($value)
+    {
+        return url('storage/' . $value);
     }
 }

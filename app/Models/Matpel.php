@@ -19,7 +19,7 @@ class Matpel extends Model
 
     public function guru()
     {
-        return $this->hasOne(Guru::class, 'nip_guru');
+        return $this->belongsTo(Guru::class, 'nip_guru', 'nip');
     }
 
     public function permission()
