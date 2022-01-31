@@ -42,7 +42,7 @@
                         </table>
 
                         <div class="d-flex justify-content-end my-3 mx-3">
-                            <a href="{{ route('dashboard') }}" class="btn btn-success text-decoration-none mt-3" style="font-size: .7rem">Kembali</a>
+                            <a href="{{ route('dashboard') }}" class="btn btn-primary text-decoration-none mt-3" style="font-size: .7rem">Kembali</a>
                         </div>
                     </div>
                 </div>
