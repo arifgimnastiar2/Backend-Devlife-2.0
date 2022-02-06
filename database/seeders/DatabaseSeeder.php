@@ -20,10 +20,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UsersTableSeeder::class,
             GuruTableSeeder::class,
-            KelasTableSeeder::class,
+            JurusanTableSeeder::class,
             MatpelTableSeeder::class,
+            KelasTableSeeder::class,
+            UsersTableSeeder::class,
             AbsensiTableSeeder::class,
             PermissionsTableSeeder::class,
         ]);

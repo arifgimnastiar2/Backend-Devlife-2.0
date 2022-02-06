@@ -17,6 +17,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('nis')->unsigned()->unique();
+            // foreign key kelas
+            $table->unsignedBigInteger('kelas_id');
+            $table->foreign('kelas_id')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->string('jurusan');
             $table->string('email')->unique();

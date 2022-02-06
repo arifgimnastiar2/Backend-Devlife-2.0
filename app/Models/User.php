@@ -19,6 +19,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
+        'kelas_id',
         'nis',
         'name',
         'jurusan',
@@ -55,5 +56,10 @@ class User extends Authenticatable
     public function permission()
     {
         return $this->hasMany(Permission::class, 'nis');
+    }
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'kelas_id', 'id_kelas');
     }
 }

@@ -7,7 +7,7 @@
                 <div class="card bg-default shadow">
                     <!-- Card header -->
                     <div class="card-header bg-transparent border-0">
-                        <h3 class="mb-0 text-white">Light table</h3>
+                        <h3 class="mb-0 text-white">Daftar Siswa</h3>
                     </div>
 
                     <!-- Table Siswa -->
@@ -16,30 +16,29 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="no">No</th>
-                                    <th scope="col" class="sort" data-sort="nis">Nis</th>
-                                    <th scope="col" class="sort" data-sort="name">Nama</th>
-                                    <th scope="col" class="sort" data-sort="kelas">Kelas</th>
+                                    <th scope="col" class="sort" data-sort="jurusan">Nama</th>
+                                    <th scope="col" class="sort" data-sort="jurusan">Jurusan</th>
+                                    <th scope="col" class="sort" data-sort="jurusan">Email</th>
+                                    <th scope="col" class="sort" data-sort="jurusan">Avatar</th>
                                 </tr>
                             </thead>
 
                             <tbody class="list">
-                                @foreach ($tables as $key => $table)
+                                @foreach ($data as $key => $data)
                                     <tr>
-                                        
-                                            <td class="budget">{{ $key+1 }}</td>
-                                            <td class="budget">{{ $table->nis }}</td>
-                                            <td class="budget">{{ $table->name }}</td>
-                                            <td class="budget">{{ $table->kelas }}</td>
-                            
+                                        <td class="budget">{{ $key+1 }}</td>
+                                        <td class="budget">{{ $data->name }}</td>
+                                        <td class="budget">{{ $data->jurusan }}</td>
+                                        <td class="budget">{{ $data->email }}</td>
+                                        <td class="budget">{{ $data->avatar }}</td>
                                     </tr>
                                 @endforeach            
                             </tbody>
                         </table>
 
-                            <div class="d-flex justify-content-end my-3 mx-3">
-                            <a href="/dashboard-admin" class="btn btn-success text-decoration-none mt-3">Kembali</a>
-
-                            </div>
+                        <div class="d-flex justify-content-end my-3 mx-3">
+                            <a href="{{ route('dashboard') }}" class="btn btn-primary text-decoration-none mt-3" style="font-size: .7rem">Kembali</a>
+                        </div>
                     </div>
                 </div>
             </div>

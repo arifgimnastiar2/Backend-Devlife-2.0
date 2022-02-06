@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AttendanceController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Api\GuruController;
-use App\Http\Controllers\KelasController;
-use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\Api\GuruController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,9 +31,9 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard'
 
 //---------------------- Kelas Route
 Route::prefix('kelas')->group(function () {
-    Route::get('/', [KelasController::class, 'index'])->name('kelas');
-    Route::get('/detail', [KelasController::class, 'show']);
-    Route::get('/detail/siswa/{nama}', [KelasController::class, 'detailSiswa']);
+    Route::get('/', [JurusanController::class, 'index'])->name('kelas');
+    Route::get('/detail/{jurusan:slug}', [JurusanController::class, 'show']);
+    Route::get('/detail/siswa/{kelas:nama}', [KelasController::class, 'show']);
 });
 
 

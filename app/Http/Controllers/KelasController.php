@@ -14,13 +14,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $items = Kelas::with('walikelas')->get();
 
-        // dd($items);
-        return view('pages.kelas.index', [
-            'title' => 'Daftar Kelas',
-            'data' => $items
-        ]);
     }
 
     /**
@@ -52,7 +46,10 @@ class KelasController extends Controller
      */
     public function show(Kelas $kelas)
     {
-        //
+        $items = $kelas->users;
+        return view('pages.kelas.siswa.index', [
+            'data' => $items
+        ]);
     }
 
     /**
