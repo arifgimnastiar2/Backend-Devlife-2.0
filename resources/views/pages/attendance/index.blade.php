@@ -1,4 +1,3 @@
-{{-- @dd($attedence) --}}
 @extends('layouts.template.main')
 @section('content')
     <div class="container-fluid">
@@ -18,8 +17,7 @@
                                     <th>No</th>
                                     <th>Nis</th>
                                     <th>Name</th>
-                                    <th>Longitude</th>
-                                    <th>latitude</th>
+                                    <th>Lokasi</th>
                                     <th>base64</th>
                                     <th>jam_masuk</th>
                                     <th>jam_keluar</th>
@@ -31,8 +29,7 @@
                                     <td>{{ $key+1 }}</td>
                                     <td>{{ $attend->user_nis }}</td>
                                     <td>{{ $attend->user->name }}</td>
-                                    <td>{{ $attend->latitude }}</td>
-                                    <td>{{ $attend->longitude }}</td>
+                                    <td>{{ $attend->lokasi }} </td>
                                     <td><img src="{{ $attend->base64 }}" alt="{{ $attend->base64 }}"/></td>
                                     <td>{{ $attend->jam_masuk }}</td>
                                     <td>{{ $attend->jam_keluar }}</td>

@@ -17,8 +17,7 @@ class CreateAbsensisTable extends Migration
             $table->id('id_absensi')->autoIncrement();
             $table->unsignedBigInteger('user_nis');
             $table->foreign('user_nis')->references('nis')->on('users');
-            $table->double('latitude', 10, 7);
-            $table->double('longitude', 10, 7);
+            $table->string('lokasi');
             $table->text('base64');
             $table->time('jam_masuk');
             $table->time('jam_keluar')->nullable();
