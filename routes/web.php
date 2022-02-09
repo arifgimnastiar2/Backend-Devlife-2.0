@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\Api\GuruController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\PermissionController;
@@ -44,3 +46,11 @@ Route::get('/detail', [PermissionController::class, 'show']);
 
 //---------------------- Attendance Route
 Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');
+
+
+//---------------------- Login Route
+Route::get('/login', [LoginController::class, 'index']);
+
+//---------------------- Register Route
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);

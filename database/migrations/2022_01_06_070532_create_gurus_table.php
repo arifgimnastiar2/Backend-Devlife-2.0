@@ -18,6 +18,9 @@ class CreateGurusTable extends Migration
             $table->string('nama_guru');
             $table->char('kode_guru', 3);
             $table->string('kompetensi_keahlian');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

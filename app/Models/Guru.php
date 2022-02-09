@@ -10,7 +10,7 @@ class Guru extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'tlp', 'alamat'];
+    protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'email', 'password'];
     protected $table = 'guru';
 
     public function guru()
