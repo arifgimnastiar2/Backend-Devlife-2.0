@@ -19,8 +19,7 @@ class Absensi extends Model
      */
     protected $fillable = [
         'user_nis',
-        'longitude',
-        'latitude',
+        'lokasi',
         'base64',
         'jam_masuk',
         'jam_keluar'

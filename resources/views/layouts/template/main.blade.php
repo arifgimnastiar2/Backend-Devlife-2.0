@@ -70,5 +70,6 @@
         <script src="{{ asset('vendor/chart.js/dist/Chart.extension.js') }}"></script>
         <!-- Argon JS -->
         <script src="{{ asset('js/argon.js') }}""></script>
+        @stack('script')
     </body>
 </html>
