@@ -50,6 +50,7 @@ Route::get('/attendance', [AttendanceController::class, 'index'])->name('attenda
 
 //---------------------- Login Route
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
 
 //---------------------- Register Route
 Route::get('/register', [RegisterController::class, 'index']);
