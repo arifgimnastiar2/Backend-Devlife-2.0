@@ -59,19 +59,19 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+              <a class="nav-link" href="https://smkn4bdg.sch.id/berita" target="_blank">
                 <i class="ni ni-spaceship"></i>
                 <span class="nav-link-text">Kabar Terbaru</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+              <a class="nav-link" href="https://www.google.co.id/maps/place/SMKN+4+Bandung/@-6.9415418,107.6266874,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e86413eb50ad:0xf9930b5268e3fee1!8m2!3d-6.9415397!4d107.6288457" target="_blank">
                 <i class="ni ni-square-pin"></i>
                 <span class="nav-link-text">Lokasi Sekolah</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+              <a class="nav-link" href="https://belajar.smkn4bdg.sch.id/" target="_blank">
                 <i class="ni ni-hat-3"></i>
                 <span class="nav-link-text">LMS</span>
               </a>

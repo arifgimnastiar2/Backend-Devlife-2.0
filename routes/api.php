@@ -4,11 +4,9 @@ use App\Http\Controllers\Api\AttendanceController;
 use App\Http\Controllers\Api\GuruController;
 use App\Http\Controllers\Api\MatpelController;
 use App\Http\Controllers\Api\PermissionController;
-use App\Http\Controllers\KelasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PhotosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +43,7 @@ Route::prefix('matpel')->group(function () {
 });
 
 // API route for Face Detector
+Route::get('/attendence', [AttendanceController::class, 'index']);
 Route::post('/attendence', [AttendanceController::class, 'store']);
 
 // API route for Permission

@@ -16,6 +16,10 @@ class AttendanceController extends Controller
      */
     public function index()
     {
+        $items = Absensi::with('user')->get();
+        // dd($items);
+        // return response()->json($items);
+        return ResponseFormatter::success($items, 'auth_token', 'Successfully get data');
     }
 
     /**

@@ -15,9 +15,9 @@
                         <table class="table align-items-center table-dark table-flush">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col" class="sort" data-sort="no">No</th>
+                                    <th scope="col" class="sort" data-sort="no" style="width: 100px;">No</th>
                                     <th scope="col" class="sort" data-sort="jurusan">Jurusan</th>
-                                    <th scope="col" >Action</th>
+                                    <th scope="col" style="width: 200px; padding-left: 50px;">Action</th>
                                 </tr>
                             </thead>
 
