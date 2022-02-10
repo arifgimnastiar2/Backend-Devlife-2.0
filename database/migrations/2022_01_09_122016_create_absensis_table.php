@@ -20,6 +20,7 @@ class CreateAbsensisTable extends Migration
             $table->string('lokasi');
             $table->text('base64');
             $table->time('jam_masuk');
+            $table->string('keterangan');
             $table->time('jam_keluar')->nullable();
             $table->timestamps();
             $table->softDeletes();

@@ -22,6 +22,7 @@ class Absensi extends Model
         'lokasi',
         'base64',
         'jam_masuk',
+        'keterangan',
         'jam_keluar'
     ];
     protected $table = 'absensi';

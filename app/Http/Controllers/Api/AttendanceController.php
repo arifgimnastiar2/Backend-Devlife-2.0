@@ -6,6 +6,7 @@ use App\Models\Absensi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class AttendanceController extends Controller
 {
@@ -35,6 +36,7 @@ class AttendanceController extends Controller
             'lokasi' => 'required|string',
             'base64' => 'required',
             'jam_masuk' => 'required|string|max:10',
+            'keterangan' => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -46,6 +48,7 @@ class AttendanceController extends Controller
             'lokasi' => $request->lokasi,
             'base64' => $request->base64,
             'jam_masuk' => $request->jam_masuk,
+            'keterangan' => $request->keterangan,
         ]);
 
         $token = $photo->createToken('auth_token')->plainTextToken;
@@ -70,9 +73,18 @@ class AttendanceController extends Controller
      * @param  \App\Models\Absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Absensi $absensi)
+    public function update($nis, $created_at, $current_time)
     {
-        //
+        $absensi = Absensi::where('created_at', 'like', '%' . $created_at . '%')
+            ->where('user_nis', $nis)->update(['jam_keluar' => $current_time]);
+
+        $data = Absensi::where('created_at', 'like', '%' . $created_at . '%')
+            ->where('user_nis', $nis)->first();
+        if ($absensi == 1) {
+            return ResponseFormatter::success($data, 'auth_token', 'Successfully update data attendance!');
+        } else {
+            return ResponseFormatter::error(null, 'Failed to update data attendance!');
+        }
     }
 
     /**
