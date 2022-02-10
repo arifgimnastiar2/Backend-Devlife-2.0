@@ -20,7 +20,7 @@ class CreateGurusTable extends Migration
             $table->string('kompetensi_keahlian');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

@@ -23,12 +23,12 @@ use App\Http\Controllers\PermissionController;
 
 Route::get('/', function () {
     return redirect('/dashboard');
-})->name('home');
+})->name('home')->middleware('auth');
 
 require __DIR__ . '/auth.php';
 
 //---------------------- Dashboard Route
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 
 //---------------------- Kelas Route
@@ -49,9 +49,12 @@ Route::get('/attendance', [AttendanceController::class, 'index'])->name('attenda
 
 
 //---------------------- Login Route
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login']);
+// --------------------- Logout Route
+Route::post('/logout', [LoginController::class, 'logout']);
 
 //---------------------- Register Route
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
