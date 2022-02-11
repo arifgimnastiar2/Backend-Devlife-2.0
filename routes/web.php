@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\PermissionController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->name('home')->middleware('auth');
 
-require __DIR__ . '/auth.php';
+// require __DIR__ . '/auth.php';
 
 //---------------------- Dashboard Route
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
