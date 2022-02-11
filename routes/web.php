@@ -28,6 +28,7 @@ Route::get('/', function () {
 
 // require __DIR__ . '/auth.php';
 
+
 //---------------------- Dashboard Route
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
@@ -49,13 +50,15 @@ Route::get('/detail', [PermissionController::class, 'show']);
 Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');
 
 
-//---------------------- Login Route
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'login']);
-// --------------------- Logout Route
-Route::post('/logout', [LoginController::class, 'logout']);
-
-//---------------------- Register Route
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store']);
+Route::namespace('Auth')->group(function(){
+    //---------------------- Login Route
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/login', [LoginController::class, 'login'])->name('login');
+    // --------------------- Logout Route
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    
+    //---------------------- Register Route
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'store'])->name('register');
+});
 

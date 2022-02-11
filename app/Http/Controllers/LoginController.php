@@ -10,12 +10,15 @@ use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Api\ResponseFormatter;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class LoginController extends Controller
 {
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';   
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 
     public function index()
     {
@@ -29,18 +32,17 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
         
-        if (Auth::guard('web')->attempt($credentials)) {
+        if (Auth::guard('admins')->attempt($credentials)) {
             // Authentication was successful...
-            $request->session()->regenerate();
-            return redirect(route('dashboard'));
+            // dd('harusnya ini masuk ke dashboard');
+            return redirect()->intended(route('dashboard'));
         }
- 
         return back()->with('loginError', 'Login Gagal!!!');
     }
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('admins')->logout();
 
         $request->session()->invalidate();
 
