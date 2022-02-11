@@ -45,6 +45,7 @@ Route::prefix('matpel')->group(function () {
 // API route for Face Detector
 Route::get('/attendence', [AttendanceController::class, 'index']);
 Route::post('/attendence', [AttendanceController::class, 'store']);
+Route::patch('/attendence/{nis}/{created_at}/{current_time}', [AttendanceController::class, 'update']);
 
 // API route for Permission
 Route::get('/permission', [PermissionController::class, 'index']);
