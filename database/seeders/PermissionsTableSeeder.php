@@ -16,36 +16,36 @@ class PermissionsTableSeeder extends Seeder
     {
         Permission::create([
             'user_nis'      => 1920118064,
-            'matpel_id'     => 1,
-            'keterangan'    => 'Sakit Perut',
+            'keterangan'    => 'Sakit',
+            'deskripsi'     => 'Sakit Perut',
             'jam_izin'      => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
         Permission::create([
             'user_nis'      => 1920118065,
-            'matpel_id'     => 1,
-            'keterangan'    => 'Sakit Mata',
+            'keterangan'    => 'Sakit',
+            'deskripsi'     => 'Sakit Mata',
             'jam_izin'      => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
         Permission::create([
             'user_nis'      => 1920118066,
-            'matpel_id'     => 1,
-            'keterangan'    => 'Sakit Kepala',
+            'keterangan'    => 'Sakit',
+            'deskripsi'     => 'Sakit Gigi',
             'jam_izin'      => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
         Permission::create([
             'user_nis'      => 1920118067,
-            'matpel_id'     => 1,
-            'keterangan'    => 'Sakit Demam',
+            'keterangan'    => 'Sakit',
+            'deskripsi'     => 'Sakit Kulit',
             'jam_izin'      => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
         Permission::create([
             'user_nis'      => 1920118091,
-            'matpel_id'     => 1,
-            'keterangan'    => 'Sakit flu',
+            'keterangan'    => 'Sakit',
+            'deskripsi'     => 'Sakit Hati',
             'jam_izin'      => date('H:i'),
             'created_at'    => date('d M Y')
         ]);

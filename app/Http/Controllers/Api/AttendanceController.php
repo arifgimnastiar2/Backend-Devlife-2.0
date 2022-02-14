@@ -61,9 +61,10 @@ class AttendanceController extends Controller
      * @param  \App\Models\Absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function show(Absensi $absensi)
+    public function selectedItem($nis)
     {
-        //
+        $items = Absensi::where('user_nis', $nis)->get();
+        return ResponseFormatter::success($items, 'auth_token', 'Successfully get data');
     }
 
     /**
@@ -76,11 +77,14 @@ class AttendanceController extends Controller
     public function update($nis, $created_at, $current_time)
     {
         $absensi = Absensi::where('created_at', 'like', '%' . $created_at . '%')
-            ->where('user_nis', $nis)->update(['jam_keluar' => $current_time]);
+            ->where('user_nis', 'like', '%' . $nis . '%')->update([
+                'jam_keluar' => $current_time,
+            ]);
 
         $data = Absensi::where('created_at', 'like', '%' . $created_at . '%')
-            ->where('user_nis', $nis)->first();
-        if ($absensi == 1) {
+            ->where('user_nis', 'like', '%' . $nis . '%')->first();
+
+        if ($absensi >= 1) {
             return ResponseFormatter::success($data, 'auth_token', 'Successfully update data attendance!');
         } else {
             return ResponseFormatter::error(null, 'Failed to update data attendance!');

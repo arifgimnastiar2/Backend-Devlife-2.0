@@ -18,10 +18,9 @@ class CreatePermissionsTable extends Migration
             $table->id('permissions_id')->autoIncrement();
             $table->unsignedBigInteger('user_nis');
             $table->foreign('user_nis')->references('nis')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('matpel_id',);
-            $table->foreign('matpel_id')->references('id_matpel')->on('matpel')->onDelete('cascade')->onUpdate('cascade');
             $table->string('lampiran')->nullable();
-            $table->text('keterangan');
+            $table->string('keterangan');
+            $table->text('deskripsi');
             $table->time('jam_izin');
             $table->timestamps();
             $table->softDeletes();

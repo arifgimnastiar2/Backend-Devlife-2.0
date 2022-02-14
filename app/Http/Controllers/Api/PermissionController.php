@@ -21,9 +21,9 @@ class PermissionController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'user_nis'      => 'required|integer',
-            'matpel_id'     => 'required|integer',
             'lampiran'      => 'required|image',
             'keterangan'    => 'required|string',
+            'deskripsi'     => 'required|string',
             'jam_izin'      => 'required'
         ]);
 

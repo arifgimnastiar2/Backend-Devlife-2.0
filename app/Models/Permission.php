@@ -15,10 +15,9 @@ class Permission extends Model
     protected $fillable = [
         'permissions_id',
         'user_nis',
-        'matpel_id',
         'lampiran',
         'keterangan',
-        'hari_izin',
+        'deskripsi',
         'jam_izin'
     ];
 

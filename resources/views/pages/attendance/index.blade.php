@@ -35,7 +35,13 @@
                                         <img src="{{ $attend->base64 }}" alt="{{ $attend->base64 }}" style="max-width: 200px; max-height: 100px; border-radius: 0.8rem"/>
                                     </td>
                                     <td>{{ $attend->jam_masuk }}</td>
-                                    <td>{{ $attend->keterangan }}</td>
+                                    <td>
+                                        @if ($attend->keterangan == 'Tepat Waktu')
+                                            <span class="badge badge-pill badge-success font-bold">{{ $attend->keterangan }}</span>
+                                        @elseif ($attend->keterangan == 'Terlambat')
+                                            <span class="badge badge-pill badge-danger font-bold">{{ $attend->keterangan }}</span>
+                                        @endif
+                                    </td>
                                     <td>{{ $attend->jam_keluar }}</td>
                                 </tr>
                                 @endforeach
