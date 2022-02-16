@@ -15,11 +15,11 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th>No</th>
-                                    <th>Nis</th>
                                     <th>Nama</th>
-                                    <th>Mata Pelajaran</th>
+                                    <th>Kelas</th>
                                     <th>Bukti Lampiran</th>
-                                    <th>keterangan</th>
+                                    <th>Keterangan</th>
+                                    <th>Deskripsi</th>
                                     <th>Jam Izin</th>
                                 </tr>
                             </thead>
@@ -27,11 +27,11 @@
                                 @foreach ($data as $key => $permission)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td>{{ $permission->user_nis }}</td>
                                     <td>{{ $permission->detailUser->name }}</td>
-                                    <td>{{ $permission->detailMatpel->nama_matpel }}</td>
+                                    <td>{{ $permission->detailUser->jurusan }}</td>
                                     <td><img src="{{ url($permission->lampiran) }}" alt="lampiran" style="max-width: 200px; max-height: 200px; border-radius: 12px;"></td>
                                     <td>{{ $permission->keterangan }}</td>
+                                    <td>{{ $permission->deskripsi }}</td>
                                     <td>{{ $permission->jam_izin }}</td>
                                 </tr>
                                 @endforeach
