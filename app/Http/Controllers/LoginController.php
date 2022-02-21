@@ -43,7 +43,6 @@ class LoginController extends Controller
         //     // dd('harusnya ini masuk ke dashboard');
         //     return redirect()->intended(route('dashboard'));
         // }
-        // return back()->with('loginError', 'Login Gagal!!!');
         // dd($request->input('nip'));
         $data = [
             'nis'     => $request->input('nip'),
@@ -54,13 +53,16 @@ class LoginController extends Controller
 
         if (Auth::check()) { // true sekalian session field di users nanti bisa dipanggil via Auth
             //Login Success
+            $request->session()->regenerate();
             return redirect()->route('home');
         } else { // false
 
             //Login Fail
-            Session::flash('error', 'Email atau password salah');
-            return redirect()->route('login');
+            return back()->with('loginError', 'Login Gagal!!!'); //login gaggl!
+            // Session::flash('error', 'Email atau password salah');
+            // return redirect()->route('login');
         }
+
     }
 
     public function logout(Request $request)
