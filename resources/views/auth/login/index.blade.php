@@ -21,7 +21,7 @@
 
             {{-- logo --}}
             <div class="mb-5">
-                <a href="#" class="text-decoration-none" style="color: #4E4081; font: 30px Raleway, sans-serif;" >
+                <a href="#" class="text-decoration-none" style="color: #4E4081; font: 30px Raleway, sans-serif;">
                     <img src="http://127.0.0.1:8000/img/logo.png" class="navbar-brand-img" alt="app-logo" width="57" height="57">
                     Dev App
                 </a>
@@ -38,24 +38,24 @@
                     <label for="nip" class="form-label">NIP</label>
                     <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip" id="nip" placeholder="nip anda" autocomplete="off" autofocus required value="{{ old('nip') }}">
                     @error('nip')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
                     @enderror
-                  </div>
+                </div>
                 <div class="password mb-3">
                     <label for="password" class="form-label">Kata Sandi</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Kata sandi anda" autocomplete="off" required>
                     @error('password')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
                     @enderror
                     <a href="forgotpassword" class="txt-forgot-password text-decoration-none">Lupa kata sandi Anda?</a>
                 </div>
 
                 <button class="w-100 btn btn-lg btn-primary" type="submit" style="background-color:#4E4081;">Masuk</button>
-            </form>        
+            </form>
         </div>
     </div>
 </div>

@@ -11,14 +11,12 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('auth.register.index', [
-
-        ]);
+        return view('auth.register.index', []);
     }
 
     public function store(Request $request)
     {
-        $validatedData = Validator::make($request->all(),[
+        $validatedData = Validator::make($request->all(), [
             'nip' => 'required|integer|unique:guru',
             'nama_guru' => 'required|max:255',
             'kompetensi_keahlian' => 'required',

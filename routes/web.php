@@ -50,15 +50,18 @@ Route::get('/detail', [PermissionController::class, 'show']);
 Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance');
 
 
-Route::namespace('Auth')->group(function(){
+Route::namespace('Auth')->group(function () {
     //---------------------- Login Route
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])->name('login');
     // --------------------- Logout Route
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-    
+
     //---------------------- Register Route
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/register', [RegisterController::class, 'store'])->name('register');
 });
 
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
