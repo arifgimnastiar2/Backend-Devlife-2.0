@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\ResponseFormatter;
+use App\Models\Jurusan;
 
 class KelasController extends Controller
 {
@@ -14,7 +17,8 @@ class KelasController extends Controller
      */
     public function index()
     {
-
+        $items = Kelas::get();
+        return ResponseFormatter::success($items, 'Successfully get data kelas!');
     }
 
     /**

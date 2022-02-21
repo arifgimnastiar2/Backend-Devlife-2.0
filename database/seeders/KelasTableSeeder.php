@@ -52,13 +52,6 @@ class KelasTableSeeder extends Seeder
             'kelas'         => 12,
             'created_at'    => date('d M Y'),
         ]);
-        Kelas::create([
-            'nip_guru'      => 1920118093,
-            'jurusan_id'    => 2,
-            'nama'          => 'Teknik Komputer Jaringan 3',
-            'kelas'         => 12,
-            'created_at'    => date('d M Y'),
-        ]);
 
         // Kelas MM
         Kelas::create([

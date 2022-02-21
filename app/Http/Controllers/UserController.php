@@ -18,7 +18,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'nis' => 'required|integer|unique:users',
             'name' => 'required|string|max:255',
-            'jurusan' => 'required|string|max:255',
+            'jurusan' => 'required|in:Rekayasa Perangkat Lunak 1, Rekayasa Perangkat Lunak 2, Rekayasa Perangkat Lunak 3, Teknik Komputer Jaringan 1, Teknik Komputer Jaringan 2, Multimedia',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:4'
         ]);
@@ -26,6 +26,10 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors());
         }
+
+        $kelas = User::when('jurusan' == $request->jurusan, function($query){
+
+        });
 
         $user = User::create([
             'nis' => $request->nis,

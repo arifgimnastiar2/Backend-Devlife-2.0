@@ -18,10 +18,16 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->bigInteger('nis')->unsigned()->unique();
             // foreign key kelas
-            $table->unsignedBigInteger('kelas_id');
+            $table->unsignedBigInteger('kelas_id')->nullable();
             $table->foreign('kelas_id')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
-            $table->string('jurusan');
+            $table->enum('jurusan', 
+            ['Rekayasa Perangkat Lunak 1', 
+            'Rekayasa Perangkat Lunak 2', 
+            'Rekayasa Perangkat Lunak 3', 
+            'Teknik Komputer Jaringan 1', 
+            'Teknik Komputer Jaringan 2',
+            'Multimedia']);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();

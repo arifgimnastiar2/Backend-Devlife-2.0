@@ -24,13 +24,13 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return redirect('/dashboard');
-})->name('home')->middleware('auth');
+})->name('home');
 
 // require __DIR__ . '/auth.php';
 
 
 //---------------------- Dashboard Route
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 //---------------------- Kelas Route

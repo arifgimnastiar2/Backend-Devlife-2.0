@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AttendanceController;
 use App\Http\Controllers\Api\GuruController;
 use App\Http\Controllers\Api\MatpelController;
 use App\Http\Controllers\Api\PermissionController;
+use App\Http\Controllers\KelasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -54,3 +55,6 @@ Route::post('/permission', [PermissionController::class, 'store']);
 
 // Api route for guru
 Route::get('/guru', [GuruController::class, 'index']);
+
+// Api route for kelas
+Route::get('/kelas', [KelasController::class, 'index']);
