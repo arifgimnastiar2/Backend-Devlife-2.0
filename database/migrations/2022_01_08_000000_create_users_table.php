@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->bigInteger('nis')->unsigned()->unique();
             // foreign key kelas
-            $table->unsignedBigInteger('kelas_id')->nullable();
+            $table->unsignedBigInteger('kelas_id'); //nullable jika belum bisa dibarengin sama jursuan.
             $table->foreign('kelas_id')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->enum('jurusan', 

@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 
 //---------------------- Dashboard Route
-Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
 //---------------------- Kelas Route
@@ -54,9 +54,10 @@ Route::namespace('Auth')->group(function () {
     //---------------------- Login Route
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])->name('login');
+    // Route::get('/dashboard', [LoginController::class, 'login'])->name('dashboard');
     // --------------------- Logout Route
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
+    
     //---------------------- Register Route
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/register', [RegisterController::class, 'store'])->name('register');

@@ -7,14 +7,19 @@ use App\Models\Matpel;
 // use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Guru extends Model
-{
+class Guru extends Authenticatable
+{   
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'email', 'password'];
+    protected $primaryKey = 'nip';
+
     protected $table = 'guru';
+    
+    protected $guard = 'admin';
+
+    protected $fillable = ['nip', 'nama_guru', 'kompetensi_keahlian', 'email', 'password'];
 
     protected $hidden = ['password', 'remember_tokern',];
 
