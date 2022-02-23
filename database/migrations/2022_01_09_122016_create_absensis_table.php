@@ -18,7 +18,7 @@ class CreateAbsensisTable extends Migration
             $table->unsignedBigInteger('user_nis');
             $table->foreign('user_nis')->references('nis')->on('users');
             $table->string('lokasi');
-            $table->text('base64');
+            $table->longText('base64');
             $table->time('jam_masuk');
             $table->string('keterangan');
             $table->time('jam_keluar')->nullable();
