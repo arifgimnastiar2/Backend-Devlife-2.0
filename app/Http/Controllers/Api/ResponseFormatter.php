@@ -11,17 +11,12 @@ class ResponseFormatter
             'message'   => null
         ],
         'data' => null,
-        'access_token' => [
-            'token_type' => 'Bearer',
-            'token' => null
-        ]
     ];
 
-    public static function success($data = null, $token = null, $message = null)
+    public static function success($data = null, $message = null)
     {
         self::$response['meta']['message'] = $message;
         self::$response['data'] = $data;
-        self::$response['access_token']['token'] = $token;
 
         return response()->json(self::$response, self::$response['meta']['code']);
     }

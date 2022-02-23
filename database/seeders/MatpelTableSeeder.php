@@ -17,6 +17,7 @@ class MatpelTableSeeder extends Seeder
         Matpel::create([
             'nip_guru'      => 1920118091,
             'nama_matpel'   => 'Sistem Informasi',
+            'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
@@ -24,6 +25,7 @@ class MatpelTableSeeder extends Seeder
         Matpel::create([
             'nip_guru'      => 1920118092,
             'nama_matpel'   => 'Matematika',
+            'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
@@ -31,6 +33,7 @@ class MatpelTableSeeder extends Seeder
         Matpel::create([
             'nip_guru'      => 1920118093,
             'nama_matpel'   => 'B. Inggris',
+            'hari'          => 'Rabu',
             'jam_matpel'    => date('H:i'),
             'created_at'    => date('d M Y')
         ]);

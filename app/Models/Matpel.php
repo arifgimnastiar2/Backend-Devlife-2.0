@@ -13,7 +13,8 @@ class Matpel extends Model
     protected $fillable = [
         'nama_matpel',
         'jam_matpel',
-        'nip'
+        'nip',
+        'hari'
     ];
     protected $table = 'matpel';
 

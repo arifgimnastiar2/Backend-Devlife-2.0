@@ -33,6 +33,9 @@
         "tailwindcss": "^2.0.2"
     },
     "dependencies": {
+        "downloadjs": "^1.4.7",
+        "html2canvas": "^1.4.1",
+        "jspdf": "^2.5.1",
         "sweetalert2": "^11.3.3"
     }
 }

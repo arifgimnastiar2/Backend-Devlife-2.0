@@ -27,8 +27,7 @@ class UserController extends Controller
             return response()->json($validator->errors());
         }
 
-        $kelas = User::when('jurusan' == $request->jurusan, function($query){
-
+        $kelas = User::when('jurusan' == $request->jurusan, function ($query) {
         });
 
         $user = User::create([
@@ -56,13 +55,12 @@ class UserController extends Controller
 
         $checkPassword = User::where('password', $request['password']);
         $token = $user->createToken('auth_token')->plainTextToken;
-        // return response()->json(['message' => 'Password or username invalid']);
 
-        return ResponseFormatter::success($user, $token,  'Successfully login into your account!');
-        // if ($checkPassword) {
-        //     ResponseFormatter::success($token, 'Successfully login into your account!');
-        // } else {
-        // }
+        return ResponseFormatter::success([
+            'data' => $user,
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+        ],  'Successfully login into your account!');
     }
 
     // method for user logout and delete token

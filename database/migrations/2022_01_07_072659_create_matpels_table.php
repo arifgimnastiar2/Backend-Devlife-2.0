@@ -18,6 +18,7 @@ class CreateMatpelsTable extends Migration
             $table->unsignedBigInteger('nip_guru');
             $table->foreign('nip_guru')->references('nip')->on('guru')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_matpel', 64);
+            $table->string('hari', 10);
             $table->time('jam_matpel');
             $table->timestamps();
             $table->softDeletes();

@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 });
 
 Route::prefix('matpel')->group(function () {
-    Route::get('/', [MatpelController::class, 'getData']);
+    Route::get('/{hari}', [MatpelController::class, 'getData']);
 });
 
 // API route for Face Detector
