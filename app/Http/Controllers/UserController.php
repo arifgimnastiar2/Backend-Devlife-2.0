@@ -17,21 +17,21 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nis' => 'required|integer|unique:users',
-            // 'kelas_id' => 'required|integer',
+            'kelas_id' => 'required|integer',
             'name' => 'required|string|max:255',
-            'jurusan' => 'required|in:Rekayasa Perangkat Lunak 1, Rekayasa Perangkat Lunak 2, Rekayasa Perangkat Lunak 3, Teknik Komputer Jaringan 1, Teknik Komputer Jaringan 2, Multimedia',
+            'jurusan' => 'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:4'
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors());
+            return response()->json($validator->errors(), 200);
         }
 
         $user = User::create([
             'nis' => $request->nis,
             'name' => $request->name,
-            // 'kelas_id' => $request->kelas_id,
+            'kelas_id' => $request->kelas_id,
             'jurusan' => $request->jurusan,
             'email' => $request->email,
             'password' => Hash::make($request->password)
@@ -72,3 +72,5 @@ class UserController extends Controller
         ];
     }
 }
+
+// |not_in:0|in:Rekayasa Perangkat Lunak 1, Rekayasa Perangkat Lunak 2, Rekayasa Perangkat Lunak 3, Teknik Komputer Jaringan 1, Teknik Komputer Jaringan 2, Multimedia

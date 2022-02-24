@@ -14,6 +14,15 @@ class KelasTableSeeder extends Seeder
      */
     public function run()
     {
+        // Kelas MM
+        Kelas::create([
+            'nip_guru'      => 1920118091,
+            'jurusan_id'    => 3,
+            'nama'          => 'Multimedia',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+
         // Kelas RPL
         Kelas::create([
             'nip_guru'      => 1920118091,
@@ -53,11 +62,51 @@ class KelasTableSeeder extends Seeder
             'created_at'    => date('d M Y'),
         ]);
 
-        // Kelas MM
+        // Kelas TAV
         Kelas::create([
             'nip_guru'      => 1920118091,
-            'jurusan_id'    => 3,
-            'nama'          => 'Multimedia',
+            'jurusan_id'    => 4,
+            'nama'          => 'Teknik Audio-Video 1',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+        Kelas::create([
+            'nip_guru'      => 1920118092,
+            'jurusan_id'    => 4,
+            'nama'          => 'Teknik Audio-Video 2',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+
+        // Kelas TITL
+        Kelas::create([
+            'nip_guru'      => 1920118091,
+            'jurusan_id'    => 5,
+            'nama'          => 'Teknik Instalasi Tenaga Listrik 1',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+        Kelas::create([
+            'nip_guru'      => 1920118092,
+            'jurusan_id'    => 5,
+            'nama'          => 'Teknik Instalasi Tenaga Listrik 2',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+
+        // Kelas TOI
+        Kelas::create([
+            'nip_guru'      => 1920118091,
+            'jurusan_id'    => 6,
+            'nama'          => 'Teknik Otomasi Industri 1',
+            'kelas'         => 12,
+            'created_at'    => date('d M Y'),
+        ]);
+    
+        Kelas::create([
+            'nip_guru'      => 1920118092,
+            'jurusan_id'    => 6,
+            'nama'          => 'Teknik Otomasi Industri 2',
             'kelas'         => 12,
             'created_at'    => date('d M Y'),
         ]);
