@@ -94,8 +94,18 @@ class UsersTableSeeder extends Seeder
             'created_at'    => date('d M Y')
         ]);
         User::create([
-            'nis'           => 1920118066,
             'kelas_id'      => 1,
+            'name'          => 'Hans Han',
+            'jurusan'       => 'Rekayasa Perangkat Lunak 1',
+            'email'         => 'Hans@gmail.com',
+            'avatar'        => 'profile.png',
+            'password'      => bcrypt('123456'),
+            'is_admin'      => true,
+            'created_at'    => date('d M Y')
+        ]);
+        // RPL 2
+        User::create([
+            'nis'           => 1920118066,
             'name'          => 'M. Naufal Akmal',
             'jurusan'       => 'Rekayasa Perangkat Lunak 1',
             'email'         => 'akmal@gmail.com',
