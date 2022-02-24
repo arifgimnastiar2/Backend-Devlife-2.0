@@ -27,6 +27,12 @@ class CreateUsersTable extends Migration
             'Rekayasa Perangkat Lunak 3', 
             'Teknik Komputer Jaringan 1', 
             'Teknik Komputer Jaringan 2',
+            'Teknik Audio-Video 1',
+            'Teknik Audio-Video 2',
+            'Teknik Instalasi Tenaga Listrik 1',
+            'Teknik Instalasi Tenaga Listrik 2',
+            'Teknik Otomasi Industri 1',
+            'Teknik Otomasi Industri 2',
             'Multimedia']);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
