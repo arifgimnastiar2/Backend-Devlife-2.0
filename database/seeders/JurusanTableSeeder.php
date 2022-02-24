@@ -36,7 +36,7 @@ class JurusanTableSeeder extends Seeder
             'slug' => 'teknik-instalasi-tenaga-listrik'
         ]);
         Jurusan::create([
-            'jurusan' => 'Teknik Otomasi Industri ',
+            'jurusan' => 'Teknik Otomasi Industri',
             'slug' => 'teknik-otomasi-industri'
         ]);
     }
