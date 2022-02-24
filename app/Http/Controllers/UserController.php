@@ -19,7 +19,7 @@ class UserController extends Controller
             'nis' => 'required|integer|unique:users',
             'kelas_id' => 'required|integer',
             'name' => 'required|string|max:255',
-            'jurusan' => 'required',
+            'jurusan' => 'required|in:Rekayasa Perangkat Lunak 1, Rekayasa Perangkat Lunak 2, Rekayasa Perangkat Lunak 3, Teknik Komputer Jaringan 1, Teknik Komputer Jaringan 2, Multimedia, Audio Video 1, Audio Video 2, Audio Video 3, Audio Video 4, Teknik Instalasi Tenaga Listrik 1, Teknik Instalasi Tenaga Listrik 2, Teknik Otomasi Industri 1, Teknik Otomasi Industri 2',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:4'
         ]);

@@ -21,19 +21,25 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('kelas_id'); //nullable jika belum bisa dibarengin sama jursuan.
             $table->foreign('kelas_id')->references('id_kelas')->on('kelas')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
-            $table->enum('jurusan', 
-            ['Rekayasa Perangkat Lunak 1', 
-            'Rekayasa Perangkat Lunak 2', 
-            'Rekayasa Perangkat Lunak 3', 
-            'Teknik Komputer Jaringan 1', 
-            'Teknik Komputer Jaringan 2',
-            'Teknik Audio-Video 1',
-            'Teknik Audio-Video 2',
-            'Teknik Instalasi Tenaga Listrik 1',
-            'Teknik Instalasi Tenaga Listrik 2',
-            'Teknik Otomasi Industri 1',
-            'Teknik Otomasi Industri 2',
-            'Multimedia']);
+            $table->enum(
+                'jurusan',
+                [
+                    'Rekayasa Perangkat Lunak 1',
+                    'Rekayasa Perangkat Lunak 2',
+                    'Rekayasa Perangkat Lunak 3',
+                    'Teknik Komputer Jaringan 1',
+                    'Teknik Komputer Jaringan 2',
+                    'Multimedia',
+                    'Audio Video 1',
+                    'Audio Video 2',
+                    'Audio Video 3',
+                    'Audio Video 4',
+                    'Teknik Instalasi Tenaga Listrik 1',
+                    'Teknik Instalasi Tenaga Listrik 2',
+                    'Teknik Otomasi Industri 1',
+                    'Teknik Otomasi Industri 2'
+                ]
+            );
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();

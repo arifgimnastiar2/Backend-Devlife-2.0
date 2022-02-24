@@ -27,10 +27,12 @@ class JurusanTableSeeder extends Seeder
             'jurusan' => 'Multimedia',
             'slug' => 'multimedia'
         ]);
+
         Jurusan::create([
-            'jurusan' => 'Teknik Audio-Video',
-            'slug' => 'teknik-audio-video'
+            'jurusan' => 'Audio Video',
+            'slug' => 'audio-video'
         ]);
+
         Jurusan::create([
             'jurusan' => 'Teknik Instalasi Tenaga Listrik',
             'slug' => 'teknik-instalasi-tenaga-listrik'
