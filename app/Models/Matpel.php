@@ -14,7 +14,8 @@ class Matpel extends Model
         'nama_matpel',
         'jam_matpel',
         'nip',
-        'hari'
+        'hari',
+        'base64_ikon'
     ];
     protected $table = 'matpel';
 

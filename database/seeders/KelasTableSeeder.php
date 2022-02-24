@@ -16,7 +16,7 @@ class KelasTableSeeder extends Seeder
     {
         // Kelas MM
         Kelas::create([
-            'nip_guru'      => 1920118091,
+            'nip_guru'      => 1920118023,
             'jurusan_id'    => 3,
             'nama'          => 'Multimedia',
             'kelas'         => 12,
@@ -64,14 +64,14 @@ class KelasTableSeeder extends Seeder
 
         // Kelas TAV
         Kelas::create([
-            'nip_guru'      => 1920118091,
+            'nip_guru'      => 1920118010,
             'jurusan_id'    => 4,
             'nama'          => 'Teknik Audio-Video 1',
             'kelas'         => 12,
             'created_at'    => date('d M Y'),
         ]);
         Kelas::create([
-            'nip_guru'      => 1920118092,
+            'nip_guru'      => 1920118011,
             'jurusan_id'    => 4,
             'nama'          => 'Teknik Audio-Video 2',
             'kelas'         => 12,
@@ -80,14 +80,14 @@ class KelasTableSeeder extends Seeder
 
         // Kelas TITL
         Kelas::create([
-            'nip_guru'      => 1920118091,
+            'nip_guru'      => 1920118012,
             'jurusan_id'    => 5,
             'nama'          => 'Teknik Instalasi Tenaga Listrik 1',
             'kelas'         => 12,
             'created_at'    => date('d M Y'),
         ]);
         Kelas::create([
-            'nip_guru'      => 1920118092,
+            'nip_guru'      => 1920118013,
             'jurusan_id'    => 5,
             'nama'          => 'Teknik Instalasi Tenaga Listrik 2',
             'kelas'         => 12,
@@ -96,7 +96,7 @@ class KelasTableSeeder extends Seeder
 
         // Kelas TOI
         Kelas::create([
-            'nip_guru'      => 1920118091,
+            'nip_guru'      => 1920118014,
             'jurusan_id'    => 6,
             'nama'          => 'Teknik Otomasi Industri 1',
             'kelas'         => 12,
@@ -104,7 +104,7 @@ class KelasTableSeeder extends Seeder
         ]);
 
         Kelas::create([
-            'nip_guru'      => 1920118092,
+            'nip_guru'      => 1920118015,
             'jurusan_id'    => 6,
             'nama'          => 'Teknik Otomasi Industri 2',
             'kelas'         => 12,
