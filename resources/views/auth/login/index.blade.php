@@ -74,7 +74,7 @@
                 <div class="card">
                     <div class="card border-0 mb-5 col-lg-12" style="background-color: #ffffff">
                         <div class="card-header bg-transparent pb-5">
-            <form action="/register" method="post">
+            <form action="/login" method="post">
                 @csrf
                 <div class="mt-4 mb-5 ms-3">
                     <a href="#" class="text-decoration-none" style="color: #4E4081; font: 30px Raleway, sans-serif;">

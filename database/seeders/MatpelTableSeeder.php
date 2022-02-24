@@ -15,7 +15,7 @@ class MatpelTableSeeder extends Seeder
     public function run()
     {
         Matpel::create([
-            'nip_guru'      => 1920118091,
+            'nip_guru'      => 1920118024,
             'nama_matpel'   => 'Pendidikan Agama dan Budi Pekerti',
             'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
@@ -23,7 +23,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118092,
+            'nip_guru'      => 1920118025,
             'nama_matpel'   => 'Pendidikan Pancasila dan Kewarganegaraan',
             'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),
@@ -31,7 +31,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118093,
+            'nip_guru'      => 1920118026,
             'nama_matpel'   => 'Bahasa Indonesia',
             'hari'          => 'Rabu',
             'jam_matpel'    => date('H:i'),
@@ -39,7 +39,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118094,
+            'nip_guru'      => 1920118027,
             'nama_matpel'   => 'Matematika',
             'hari'          => 'Kamis',
             'jam_matpel'    => date('H:i'),
@@ -47,7 +47,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118095,
+            'nip_guru'      => 1920118114,
             'nama_matpel'   => 'Sejarah Indonesia',
             'hari'          => 'Jumat',
             'jam_matpel'    => date('H:i'),
@@ -55,7 +55,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118096,
+            'nip_guru'      => 1920118014,
             'nama_matpel'   => 'Bahasa Inggris',
             'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
@@ -63,7 +63,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118097,
+            'nip_guru'      => 1920118015,
             'nama_matpel'   => 'Seni Budaya',
             'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),
@@ -71,7 +71,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118098,
+            'nip_guru'      => 1920118016,
             'nama_matpel'   => 'Pendidikan Jasmani, Olahraga dan Kesehatan',
             'hari'          => 'Rabu',
             'jam_matpel'    => date('H:i'),
@@ -79,7 +79,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118099,
+            'nip_guru'      => 1920118018,
             'nama_matpel'   => 'Simulasi dan Komunikasi Digital',
             'hari'          => 'Kamis',
             'jam_matpel'    => date('H:i'),
@@ -87,7 +87,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118100,
+            'nip_guru'      => 1920118019,
             'nama_matpel'   => 'Fisika',
             'hari'          => 'Jumat',
             'jam_matpel'    => date('H:i'),
@@ -95,7 +95,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118101,
+            'nip_guru'      => 1920118020,
             'nama_matpel'   => 'Kimia',
             'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
@@ -103,7 +103,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118102,
+            'nip_guru'      => 1920118110,
             'nama_matpel'   => 'Sistem Komputer',
             'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),
@@ -111,7 +111,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118103,
+            'nip_guru'      => 1920118021,
             'nama_matpel'   => 'Komputer dan Jaringan Dasar',
             'hari'          => 'Rabu',
             'jam_matpel'    => date('H:i'),
@@ -119,7 +119,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118104,
+            'nip_guru'      => 1920118102,
             'nama_matpel'   => 'Pemrograman Dasar',
             'hari'          => 'Kamis',
             'jam_matpel'    => date('H:i'),
@@ -127,15 +127,15 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118105,
-            'nama_matpel'   => 'Dasar Desain grafi',
+            'nip_guru'      => 1920118023,
+            'nama_matpel'   => 'Dasar Desain Grafis',
             'hari'          => 'Jumat',
             'jam_matpel'    => date('H:i'),
             'created_at'    => date('d M Y')
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118106,
+            'nip_guru'      => 1920118030,
             'nama_matpel'   => 'Basa Sunda',
             'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
@@ -143,7 +143,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118107,
+            'nip_guru'      => 1920118131,
             'nama_matpel'   => 'Pemodelan Perangkat Lunak',
             'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),
@@ -151,7 +151,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118108,
+            'nip_guru'      => 1920118032,
             'nama_matpel'   => 'Basis Data',
             'hari'          => 'Rabu',
             'jam_matpel'    => date('H:i'),
@@ -159,7 +159,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118109,
+            'nip_guru'      => 1920118034,
             'nama_matpel'   => 'Pemrograman Berorientasi Obyek',
             'hari'          => 'Kamis',
             'jam_matpel'    => date('H:i'),
@@ -167,7 +167,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118110,
+            'nip_guru'      => 1920118035,
             'nama_matpel'   => 'Pemrograman Web dan Perangkat Bergerak',
             'hari'          => 'Jumat',
             'jam_matpel'    => date('H:i'),
@@ -175,7 +175,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118111,
+            'nip_guru'      => 1920118036,
             'nama_matpel'   => 'Produk Kreatif dan Kewirausahaan',
             'hari'          => 'Senin',
             'jam_matpel'    => date('H:i'),
@@ -183,7 +183,7 @@ class MatpelTableSeeder extends Seeder
         ]);
 
         Matpel::create([
-            'nip_guru'      => 1920118112,
+            'nip_guru'      => 1920118037,
             'nama_matpel'   => 'Bahasa Jepang',
             'hari'          => 'Selasa',
             'jam_matpel'    => date('H:i'),

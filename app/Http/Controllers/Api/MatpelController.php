@@ -9,12 +9,10 @@ use Illuminate\Http\Request;
 
 class MatpelController extends Controller
 {
-    public function getData(Request $request)
+    public function getData($paramsDay)
     {
-        $paramsDay = $request->input('hari');
-
         if ($paramsDay) {
-            $data = Matpel::with('guru')->where('hari', $paramsDay)->get();
+            $data = Matpel::with('guru')->where('hari',  $paramsDay)->get();
             return ResponseFormatter::success($data, 'Successfully get data matpel filter by day ' . $paramsDay . '!');
         } else {
             $paramsDay = 'Senin';

@@ -55,7 +55,7 @@ class GuruTableSeeder extends Seeder
         ]);
 
         Guru::create([
-            'nip'                   => 1920118014,
+            'nip'                   => 1920118114,
             'nama_guru'             => 'Mira Munawaroh',
             'kode_guru'             => 'MAM',
             'kompetensi_keahlian'   => 'Sejarah Indonesia',
@@ -115,6 +115,16 @@ class GuruTableSeeder extends Seeder
         ]);
 
         Guru::create([
+            'nip'                   => 1920118110,
+            'nama_guru'             => 'Offy Solehatun',
+            'kode_guru'             => 'OSN',
+            'kompetensi_keahlian'   => 'Sistem Komputer',
+            'email'                 => 'offy1@gmail.com',
+            'password'              => bcrypt('123456'),
+            'created_at'            => date('d M Y')
+        ]);
+
+        Guru::create([
             'nip'                   => 1920118019,
             'nama_guru'             => 'Ine Agustina, S.T.',
             'kode_guru'             => 'TUR',
@@ -130,6 +140,16 @@ class GuruTableSeeder extends Seeder
             'kode_guru'             => 'KSN',
             'kompetensi_keahlian'   => 'Kimia',
             'email'                 => 'kustini@gmail.com',
+            'password'              => bcrypt('123456'),
+            'created_at'            => date('d M Y')
+        ]);
+
+        Guru::create([
+            'nip'                   => 1920118102,
+            'nama_guru'             => 'Ferry Stephanus Suwita',
+            'kode_guru'             => 'FER',
+            'kompetensi_keahlian'   => 'Pemograman Dasar',
+            'email'                 => 'ferry1@gmail.com',
             'password'              => bcrypt('123456'),
             'created_at'            => date('d M Y')
         ]);
@@ -235,7 +255,7 @@ class GuruTableSeeder extends Seeder
         ]);
 
         Guru::create([
-            'nip'                   => 1920118031,
+            'nip'                   => 1920118131,
             'nama_guru'             => 'Hana Zainab Mukarromah, S.T.',
             'kode_guru'             => 'HBM',
             'kompetensi_keahlian'   => 'Pemodelan Perangkat Lunak dan Pemograman Web dan Perangkat Bergerak',
