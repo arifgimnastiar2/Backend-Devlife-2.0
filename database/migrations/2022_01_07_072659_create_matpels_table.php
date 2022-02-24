@@ -20,6 +20,7 @@ class CreateMatpelsTable extends Migration
             $table->string('nama_matpel', 64);
             $table->string('hari', 10);
             $table->time('jam_matpel');
+            $table->text('base64_ikon')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
