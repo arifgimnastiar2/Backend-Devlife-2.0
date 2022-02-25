@@ -5,10 +5,10 @@
 <!-- Navbar -->
 <nav id="navbar-main" class="navbar navbar-horizontal fixed-top navbar-transparent navbar-main navbar-expand-lg" style="background-color: #<div class="header py-7 py-lg-8 pt-lg-9" style="background-color: #825ee4">
     <div class="container">
-      <a class="navbar-brand" href="dashboard.html">
+      <a class="navbar-brand" href="">
         <div class="d-flex">
             <img class="" src="img/logo.png" width="25" height="25">
-            <a class="navbar-brand" href="" style="color: #ffffff">Devector</a>
+            <a class="navbar-brand" href="" style="color:#4E4081; font-size:1.3rem;">Devector</a>
         </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,10 +101,10 @@
                     @enderror
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary" type="submit" style="background-color:#4E4081;">Masuk</button>
+                <button class="w-100 btn btn-lg btn-primary mt--4" type="submit" style="background-color:#4E4081;">Masuk</button>
             </form>
             <!-- akhir harus ada -->
-            <small><a href="/login" class="text-decoration-none">Sudah punya akun?</a></small>
+            <small><a href="/register" class="text-decoration-none">Sudah punya akun?</a></small>
                     </div>
                     </div>
                 </div>
