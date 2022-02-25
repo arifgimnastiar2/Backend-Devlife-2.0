@@ -37,6 +37,8 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
+        $request->session()->flash('success', 'Berhasil');
+
         return redirect('/login')->with('success', 'Buat akun berhasil! Silahkan Masuk');
     }
 }

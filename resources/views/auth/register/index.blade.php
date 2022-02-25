@@ -8,7 +8,7 @@
       <a class="navbar-brand" href="dashboard.html">
         <div class="d-flex">
             <img class="" src="img/logo.png" width="25" height="25">
-            <a class="navbar-brand" href="" style="color: #ffffff">Devector</a>
+            <a class="navbar-brand" href="{{ route('register') }}" style="color: #ffffff; font-size: 1.3rem">Devector</a>
         </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,17 +27,17 @@
         </div>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('home') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('login') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Login</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="register.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('register') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
@@ -101,7 +101,7 @@
                     @enderror
                 </div>
                 <div class="kompetensi_keahlian mb-3">
-                    <label for="kompetensi_keahlian" class="form-label">Kompetemsi Keahlian</label>
+                    <label for="kompetensi_keahlian" class="form-label">Kompetensi Keahlian</label>
                     <input type="text" class="form-control @error('kompetensi_keahlian') is-invalid @enderror" name="kompetensi_keahlian" id="kompetensi_keahlian" placeholder="Kompetemsi keahlian anda" autocomplete="off" required>
                     @error('kompetensi_keahlian')
                     <div class="invalid-feedback">
@@ -128,10 +128,10 @@
                     @enderror
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary" type="submit" style="background-color:#4E4081;">Masuk</button>
+                <button class="w-100 btn btn-lg btn-primary mt--4 mb-3" type="submit" style="background-color:#4E4081;">Masuk</button>
             </form>
             <!-- akhir harus ada -->
-            <small><a href="/login" class="text-decoration-none">Sudah punya akun?</a></small>
+            <small><a href="/login" class="text-decoration-none" style="font-size: 15px; color: #4e4081">Sudah punya akun?</a></small>
                     </div>
                     </div>
                 </div>

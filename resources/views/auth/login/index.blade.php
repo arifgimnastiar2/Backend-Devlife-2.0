@@ -8,7 +8,7 @@
       <a class="navbar-brand" href="">
         <div class="d-flex">
             <img class="" src="img/logo.png" width="25" height="25">
-            <a class="navbar-brand" href="" style="color:#4E4081; font-size:1.3rem;">Devector</a>
+            <a class="navbar-brand" href="{{ route('login') }}" style="color:#ffffff; font-size:1.3rem;">Devector</a>
         </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,17 +27,17 @@
         </div>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('home') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('login') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Login</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="register.html" class="nav-link" style="color: #ffffff">
+            <a href="{{ route('register') }}" class="nav-link" style="color: #ffffff">
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
@@ -71,6 +71,14 @@
         <div class="col-lg-6 col-md-8">
             <!-- harus ada -->  
             <div class="row justify-content-center">
+              @if(session()->has('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{  session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              @endif
                 <div class="card">
                     <div class="card border-0 mb-5 col-lg-12" style="background-color: #ffffff">
                         <div class="card-header bg-transparent pb-5">
@@ -101,10 +109,10 @@
                     @enderror
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary mt--4" type="submit" style="background-color:#4E4081;">Masuk</button>
+                <button class="w-100 btn btn-lg btn-primary mt--4 mb-3" type="submit" style="background-color:#4E4081;">Masuk</button>
             </form>
             <!-- akhir harus ada -->
-            <small><a href="/register" class="text-decoration-none">Sudah punya akun?</a></small>
+            <small><a href="{{ route('register') }}" class="text-decoration-none" style="font-size: 15px; color: #4e4081">Belum memiliki akun?</a></small>
                     </div>
                     </div>
                 </div>
